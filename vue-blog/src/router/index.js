@@ -1,9 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import AdminIndex from '../admin/index'
+import Editor from '../admin/components/editor'
+
 Vue.use(VueRouter)
 
-const routes = []
+const routes = [
+  {
+    path: '/',
+    name: 'admin',
+    component: AdminIndex,
+    children: [
+      {
+        path: 'editor',
+        name: 'editor',
+        component: Editor
+      }
+    ]
+  }
+]
 
 // eslint-disable-next-line no-new
 const router = new VueRouter({
