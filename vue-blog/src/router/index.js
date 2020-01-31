@@ -1,21 +1,63 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Login from '../admin/login'
 import AdminIndex from '../admin/index'
-import Editor from '../admin/components/editor'
+import Home from '../admin/components/home'
+import blogEditor from '../admin/components/blog-editor'
+import Types from '../admin/components/types'
+import typesAdd from "../admin/components/types-add";
+import Tags from '../admin/components/tags'
+import tagsAdd from '../admin/components/tags-add'
+import Blogs from '../admin/components/blogs'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/admin',
     name: 'admin',
     component: AdminIndex,
     children: [
       {
-        path: 'editor',
-        name: 'editor',
-        component: Editor
+        path: 'home',
+        name: 'home',
+        component: Home
+      },
+      {
+        path: 'blog-editor/:id',
+        name: 'blog-editor',
+        component: blogEditor
+      },
+      {
+        path: 'types',
+        name: 'types',
+        component: Types
+      },
+      {
+        path: 'types-add/:id/:name',
+        name: 'types-add',
+        component: typesAdd
+      },
+      {
+        path: 'tags',
+        name: 'tags',
+        component: Tags
+      },
+      {
+        path: 'tags-add/:id/:name',
+        name: 'tags-add',
+        component: tagsAdd
+      },
+      {
+        path: 'blogs',
+        name: 'blogs',
+        component: Blogs
       }
     ]
   }
