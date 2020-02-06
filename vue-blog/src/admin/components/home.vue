@@ -1,13 +1,17 @@
 <template>
-    <div>欢迎登陆</div>
+    <div>
+        <el-image
+                src="https://i.picsum.photos/id/155/900/600.jpg"
+                lazy
+                style="width: 100%">
+        </el-image>
+    </div>
 </template>
 
 <script>
     export default {
         name: "home",
         created() {
-            this.$emit('handleActiveName', 's-1');
-            this.$emit('handleBreadCrumb', ['后台管理', '首页']);
         }
     }
 </script>

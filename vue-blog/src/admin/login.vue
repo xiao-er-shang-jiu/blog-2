@@ -1,95 +1,141 @@
 <template>
-    <Layout :style="{height: '100vh', background: 'none', opacity: 0.9}">
-        <Row :style="{height: '100%'}" type="flex" justify="center" align="middle">
-            <Card :style="{width: '35%'}" align="center" :padding="50">
-                <h2 slot="title">后台管理登陆</h2>
-                <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" align="center" :label-width="80" >
-                    <form-item label="用户名" prop="username">
-                        <i-input v-model="formValidate.username" placeholder="用户名..."></i-input>
-                    </form-item>
-                    <form-item label="密码" prop="password">
-                        <i-input v-model="formValidate.password" type="password" password placeholder="密码..."></i-input>
-                    </form-item>
-                </Form>
-                <Button
+    <el-row class="page-container" type="flex" justify="center" align="middle">
+        <transition-group name="bg">
+            <div :key="1" v-show="bgImgIndex === 1" class="bg-container">
+                <img src="../assets/background/img/1.jpg">
+            </div>
+            <div :key="2" v-show="bgImgIndex === 2" class="bg-container">
+                <img src="../assets/background/img/2.jpg">
+            </div>
+            <div :key="3" v-show="bgImgIndex === 3" class="bg-container">
+                <img src="../assets/background/img/3.jpg">
+            </div>
+        </transition-group>
+        <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
+            <el-form-item>
+                <h1>后台登陆</h1>
+            </el-form-item>
+            <el-form-item prop="username">
+                <el-input v-model="ruleForm.username" placeholder="Username"></el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+                <el-input v-model="ruleForm.password" placeholder="Password" type="password"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button
+                        @keyup.enter="handleSubmit('ruleForm')"
+                        @click="handleSubmit('ruleForm')"
                         type="primary"
-                        :loading="loading"
-                        @click="handleSubmit('formValidate')"
-                >登陆</Button>
-            </Card>
-        </Row>
-    </Layout>
+                        style="width: 100%"
+                        :loading="loading">
+                    登 录</el-button>
+            </el-form-item>
+        </el-form>
+    </el-row>
 </template>
 
 <script>
     import md5 from 'js-md5'
+    import DATA from './data'
     export default {
         name: "login",
         data () {
             return{
-                formValidate: {
-                    username: '',
-                    password: ''
-                },
-                ruleValidate: {
-                    username: [
-                        { required: true, message: '用户名不能为空', trigger: 'blur' }
-                    ],
-                    password: [
-                        { required: true, message: '密码不能为空', trigger: 'blur' }
-                    ]
-                },
-                loading: false
+                bgImgIndex: 1,
+                loading: false,
+                ruleForm: DATA.loginForm,
+                rules: DATA.loginRules
             }
         },
         created() {
-            let that = this;
-            document.onkeydown = function () {
-                if (window.event.keyCode === 13){
-                    that.handleSubmit('formValidate')
-                }
-            };
+           this.keyEnter();
         },
         methods: {
-            handleSubmit(name) {
-                this.$refs[name].validate((valid) => {
-                    if (valid) {
-                        this.loading = true;
-                        this.post('/admin/login', {
-                            username: this.formValidate.username,
-                            password: md5(this.formValidate.password)
-                        }).then(res => {
-                            if(res.type === 1){
-                                this.$Message.success(res.message);
-                                let that = this;
-                                this.timer = setTimeout(function () {
-                                    that.loading = false;
-                                    that.$router.push({name: 'home'})
-                                },1000)
-                            }
-                            else {
-                                this.$Message.error(res.message);
-                                let that = this;
-                                this.timer = setTimeout(function () {
-                                    that.loading = false;
-                                }, 1000);
-                            }
-                        }).catch(err => {
-                            // eslint-disable-next-line no-console
-                            console.log(err);
-                        })
+            login () {
+                this.post('/admin/login', {
+                    username: this.ruleForm.username,
+                    password: md5(this.ruleForm.password)
+                }).then(res => {
+                    if (res.type === 1){
+                        this.$message({message: res.message, type: 'success'});
+                        this.$router.push({name: 'admin'});
                     } else {
-                        this.$Message.error('请填写完整!');
+                        this.$message.error(res.message);
                     }
                 })
+            },
+            handleLoading () {
+                this.loading = true;
+                this.timeout = setTimeout(() => {
+                    this.login();
+                }, 1000)
+            },
+            keyEnter () {
+                document.onkeydown = () => {
+                    if (window.event.keyCode === 13){
+                        this.handleSubmit('ruleForm')
+                    }
+                };
+            },
+            handleSubmit (formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        this.handleLoading();
+                    }
+                });
             }
         },
+        mounted() {
+            this.interval = setInterval( () => {
+                if(this.bgImgIndex === 3)
+                    this.bgImgIndex = 1;
+                else
+                    this.bgImgIndex++;
+            }, 5000)
+        },
         destroyed() {
-            clearTimeout(this.timer);
+            clearInterval(this.interval);
+            clearTimeout(this.timeout);
         }
     }
 </script>
 
 <style scoped>
-
+    .page-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        color: white;
+    }
+    .bg-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    .bg-container img{
+        width: 100%;
+        height: 100%;
+    }
+    .bg-enter-active, .bg-leave-active {
+        transition: all 1s linear;
+    }
+    .bg-enter-to, .bg-leave{
+        opacity: 1;
+    }
+    .bg-enter, .bg-leave-to {
+        opacity: 0;
+    }
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        text-shadow: 0 1px 4px rgba(0,0,0,.2);
+    }
+    form {
+        width: 300px;
+        text-align: center;
+    }
 </style>

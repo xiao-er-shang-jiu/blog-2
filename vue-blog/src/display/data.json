@@ -1,0 +1,38 @@
+{
+  "musicList": [
+    {
+      "title": "纸短情长",
+      "artist": "花粥",
+      "pic": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E7%BA%B8%E7%9F%AD%E6%83%85%E9%95%BF.jpg",
+      "lrc": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E8%8A%B1%E7%B2%A5%20-%20%E7%BA%B8%E7%9F%AD%E6%83%85%E9%95%BF.lrc",
+      "src": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E8%8A%B1%E7%B2%A5%2B-%2B%E7%BA%B8%E7%9F%AD%E6%83%85%E9%95%BF.mp3"
+    },
+    {
+      "title": "盗将行",
+      "artist": "花粥&马宇阳",
+      "pic": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E7%9B%97%E5%B0%86%E8%A1%8C.jpg",
+      "lrc": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E8%8A%B1%E7%B2%A5%26%E9%A9%AC%E9%9B%A8%E9%98%B3%20-%20%E7%9B%97%E5%B0%86%E8%A1%8C.lrc",
+      "src": "https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/%E8%8A%B1%E7%B2%A5%E3%80%81%E9%A9%AC%E9%9B%A8%E9%98%B3-%E7%9B%97%E5%B0%86%E8%A1%8C.mp3"
+    }
+  ],
+
+
+  "commentForm": {
+    "id": -1,
+    "content": "",
+    "nickname": "",
+    "email": ""
+  },
+  "commentRules": {
+    "content": [
+      { "required": true, "message": "内容不能为空", "trigger": "blur" }
+    ],
+    "nickname": [
+      { "required": true, "message": "昵称不能为空", "trigger": "blur" }
+    ],
+    "email": [
+      { "required": true, "message": "邮箱不能为空", "trigger": "blur" },
+      { "type": "email", "message": "请输入正确的邮箱地址", "trigger": ["blur", "change"] }
+    ]
+  }
+}

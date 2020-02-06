@@ -50,34 +50,34 @@ axios.interceptors.response.use(
 
 
 function get(url, params){
-  return new Promise((resolve, reject) => {
-    axios.get(url, {
-      params: params
-    }).then(res => {
-        resolve(res.data)
-    }).catch(err => {
-        if(err.response.status === 401){
-            window.location.href = '/login'
-        }
-        else {
-            reject(err)
-        }
-    })
-  });
-}
-
-function post(url, params){
-  return new Promise((resolve, reject) => {
-    axios.post(url, qs.stringify(params))
-        .then(res => {
+    // eslint-disable-next-line no-unused-vars
+    return new Promise((resolve, reject) => {
+        axios.get(url, {params: params}).then(res => {
             resolve(res.data)
-        })
-        .catch(err => {
+        }).catch(err => {
             if(err.response.status === 401){
                 window.location.href = '/login'
             }
             else {
-                reject(err)
+                // eslint-disable-next-line no-console
+                console.log(err);
+            }
+        })
+    });
+}
+
+function post(url, params){
+    // eslint-disable-next-line no-unused-vars
+    return new Promise((resolve, reject) => {
+        axios.post(url, qs.stringify(params)).then(res => {
+            resolve(res.data)
+        }).catch(err => {
+            if(err.response.status === 401){
+                window.location.href = '/login'
+            }
+            else {
+                // eslint-disable-next-line no-console
+                console.log(err);
             }
         })
   });

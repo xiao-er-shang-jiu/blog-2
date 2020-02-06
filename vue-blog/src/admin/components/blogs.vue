@@ -1,201 +1,223 @@
 <template>
-    <Row :style="{width: '100%'}">
-        <Form inline>
-            <form-item>
-                <i-input v-model="query.title" placeholder="标题..."></i-input>
-            </form-item>
-            <form-item>
-                <Select v-model="query.typeId">
-                    <Option value="">不选</Option>
-                    <Option v-for="item in type" :value="item.id" :key="item.id">{{item.name}}</Option>
-                </Select>
-            </form-item>
-            <form-item>
-                <Checkbox v-model="query.recommend">推荐</Checkbox>
-            </form-item>
-            <form-item>
-                <Button @click="search" icon="md-search" type="primary" :loading="query.loading">搜索</Button>
-            </form-item>
-        </Form>
-        <Table :loading="loading" border :columns="tableHeader" :data="tableData" :style="{width: '100%'}">
-            <template slot-scope="{ row }" slot="title">
-                <strong>{{ row.title }}</strong>
-            </template>
-            <template slot-scope="{ row }" slot="action">
-                <Button type="primary" size="small" style="margin-right: 5px" @click="update1(row.id)">修改</Button>
-                <Button type="error" size="small" @click="handleDelete(row.id)">删除</Button>
-            </template>
-        </Table>
-        <br>
-        <Row>
-            <Page
-                    :current="page.current"
-                    :total="page.total"
-                    :page-size="page.pageSize"
-                    @on-change="handlePageChange"
-            ></Page>
-        </Row>
-        <Modal v-model="modal_show" width="360">
-            <p slot="header" style="color:#f60;text-align:center">
-                <Icon type="ios-information-circle"></Icon>
-                <span>删除确认</span>
-            </p>
-            <div style="text-align:center">
-                <p>删除后将不可恢复</p>
-                <p>是否继续删除?</p>
-            </div>
-            <div slot="footer">
-                <Button type="error" size="large" long :loading="modal_loading" @click="delete1">删除</Button>
-            </div>
-        </Modal>
-    </Row>
+    <div>
+        <el-form :inline="true" :model="query" @submit.native.prevent>
+            <el-form-item>
+                <el-input v-model="query.title" placeholder="标题"></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-select v-model="query.typeId" placeholder="分类">
+                    <template v-for="type in types">
+                        <el-option
+                                :label="type.name"
+                                :value="type.id"
+                                :key="type.id">
+                        </el-option>
+                    </template>
+                </el-select>
+            </el-form-item>
+            <el-form-item>
+                <el-checkbox v-model="query.recommend">推荐</el-checkbox>
+            </el-form-item>
+            <el-form-item>
+                <el-button
+                        type="primary"
+                        icon="el-icon-search"
+                        @click="search"
+                        @keyup.enter="search">
+                    搜 索</el-button>
+            </el-form-item>
+        </el-form>
+        <el-table :data="tableData" stripe style="width: 100%">
+            <el-table-column
+                    prop="id"
+                    label="序号"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.$index}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="title"
+                    label="标题"
+                    width="320">
+                <template slot-scope="scope">
+                    {{scope.row.title}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="flag"
+                    label="类型"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.flag}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="published"
+                    label="状态"
+                    width="80">
+                <template slot-scope="scope">
+                    {{scope.row.published === true ? '已发布':'草稿'}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="updateTime"
+                    label="更新时间"
+                    width="160">
+                <template slot-scope="scope">
+                    {{timeTransform(scope.row.updateTime)}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="views"
+                    label="浏览"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.views}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="admire"
+                    label="点赞"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.admire}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="appreciation"
+                    label="赞赏"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.appreciation === true ? '开启':'关闭'}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="shareStatement"
+                    label="转载"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.shareStatement === true ? '开启':'关闭'}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="commentabled"
+                    label="评论"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.commentabled === true ? '开启':'关闭'}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="recommend"
+                    label="推荐"
+                    width="60">
+                <template slot-scope="scope">
+                    {{scope.row.recommend === true ? '是':'否'}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    label="操作"
+                    fixed="right"
+                    width="180">
+                <template slot-scope="scope">
+                    <el-button
+                            size="mini"
+                            @click="$router.push({path: `/admin/blog-editor/${scope.row.id}`})">
+                        编辑</el-button>
+                    <el-popconfirm
+                            confirmButtonText='好的'
+                            cancelButtonText='不用了'
+                            icon="el-icon-info"
+                            iconColor="red"
+                            title="您确定要删除吗？"
+                            style="margin-left: 10px;"
+                            @onConfirm="handleDelete(scope.row.id)">
+                        <el-button size="mini" type="danger" slot="reference">删除</el-button>
+                    </el-popconfirm>
+                </template>
+            </el-table-column>
+        </el-table>
+        <el-pagination
+                background
+                style="margin-top: 20px"
+                :page-size="8"
+                :current-page.sync="page.current"
+                layout="prev, pager, next"
+                :total="page.total"
+                @current-change="currentChange">
+        </el-pagination>
+    </div>
 </template>
 
 <script>
-    import {timeFormat} from "../../util/util";
+    import {timeFormatYMDHMS} from "../../util/util";
 
     export default {
         name: "blogs",
         data () {
             return{
-                tableHeader: [
-                    {
-                        title: '编号',
-                        key: 'id',
-                        align: 'center'
-                    },
-                    {
-                        title: '标题',
-                        slot: 'title',
-                        width: 300
-                    },
-                    {
-                        title: '类型',
-                        key: 'flag',
-                        align: 'center'
-                    },
-                    {
-                        title: '推荐',
-                        key: 'recommend',
-                        align: 'center'
-                    },
-                    {
-                        title: '状态',
-                        key: 'published',
-                        align: 'center'
-                    },
-                    {
-                        title: '浏览量',
-                        key: 'views',
-                        align: 'center'
-                    },
-                    {
-                        title: '更新时间',
-                        key: 'updateTime',
-                        align: 'center',
-                        width: 200
-                    },
-                    {
-                        title: '操作',
-                        slot: 'action',
-                        width: 150,
-                        align: 'center'
-                    }
-                ],
                 tableData: [],
-                loading: true,
-                modal_show: false,
-                modal_loading: false,
-                deleteId: '',
                 page: {
                     current: 1,
-                    total: 0,
-                    pageSize: 10
+                    total: 0
                 },
                 query: {
                     title: null,
                     typeId: null,
-                    recommend: false,
-                    loading: false
+                    recommend: false
                 },
-                type: []
+                types: []
             }
         },
         methods: {
-            handleDelete (id){
-                this.deleteId = id;
-                this.modal_show = true;
-            },
-            update1 (id) {
-                this.$router.push({path: `/admin/blog-editor/${id}`})
-            },
-            delete1 () {
-                this.modal_loading = true;
-                this.loading = true;
-                let that = this;
-                this.timer = setTimeout(function () {
-                    that.modal_loading = false;
-                    that.modal_show = false;
-                    that.loading = false;
-                }, 1000);
-                this.get(`/admin/blogs/${this.deleteId}/delete`, {}).then(res => {
-                    if (res.type === 1){
-                        this.$Message.success(res.message);
-                        this.loadData(1);
-                    }
-                }).catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
-                })
+            timeTransform (time) {
+                return timeFormatYMDHMS(time)
             },
             search () {
-                this.query.loading = true;
-                this.loadData(1);
+                this.page.current = 1;
+                this.loadBlogs(this.page.current);
             },
-            handlePageChange (index) {
-                this.loadData(index);
+            keyEnter () {
+                document.onkeydown = () => {
+                    if (window.event.keyCode === 13 && this.dialogVisible){
+                        this.handleSubmit('typeForm')
+                    }
+                };
             },
-            loadData (index) {
-                this.loading = true;
-                let that = this;
-                this.timer = setTimeout(function () {
-                    that.loading = false;
-                    that.query.loading = false;
-                }, 1000)
+            currentChange (index) {
+                this.loadBlogs(index);
+            },
+            handleDelete (index) {
+                this.get(`/admin/blogs/${index}/delete`, {}).then(res => {
+                    if (res.type === 1){
+                        this.$message({type: 'success', message: res.message});
+                        this.loadBlogs(this.page.current);
+                    }
+                })
+            },
+            loadBlogs (index) {
                 this.post('admin/blogs/search', {
                     title: this.query.title,
                     typeId: this.query.typeId,
                     recommend: this.query.recommend,
                     page: index - 1
                 }).then(res => {
-                    let data = res.content;
-                    for(let j = 0, len = data.length; j < len; j++) {
-                        data[j].recommend = data[j].recommend === true ? '是':'否';
-                        data[j].published = data[j].published === true ? '已发布':'草稿';
-                        data[j].updateTime = timeFormat(data[j].updateTime);
-                    }
-                    this.tableData = data;
-                    this.page.current = res.number + 1;
+                    this.tableData = res.content;
                     this.page.total = res.totalElements;
-                }).catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
+                })
+            },
+            loadTypes () {
+                this.get('/admin/types/getAll', {}).then(res => {
+                    this.types = res;
                 })
             }
         },
         created() {
-            this.loadData(1);
-            this.get('/admin/types/getAll', {})
-                .then(res => {
-                    this.type = res;
-                })
-                .catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
-                });
-            this.$emit('handleActiveName', 's-3-1');
-            this.$emit('handleOpenNames', 's-3');
-            this.$emit('handleBreadCrumb', ['后台管理', '博客管理', '博客列表']);
+            this.$emit('startLoading');
+            this.loadTypes();
+            this.loadBlogs(this.page.current);
+            this.keyEnter();
         },
         destroyed() {
             clearTimeout(this.timer);

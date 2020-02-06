@@ -1,193 +1,174 @@
 <template>
-    <Row :style="{width: '100%'}">
-        <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80" class="form">
-            <FormItem label="标题" prop="title">
-                <i-input v-model="formValidate.title" placeholder="请输入博客标题..."></i-input>
-            </FormItem>
-            <FormItem label="内容">
-                <mavon-editor
-                        :tabSize="4"
-                        codeStyle="darcula"
-                        v-model="formValidate.content"
-                        :style="{zIndex: 100}"
-                        @save="save"
-                ></mavon-editor>
-            </FormItem>
-            <FormItem label="分类" prop="typeId">
-                <RadioGroup v-model="formValidate.typeId">
-                    <Radio v-for="type in types" :label="type.id" :key="type.name">{{type.name}}</Radio>
-                </RadioGroup>
-            </FormItem>
-            <FormItem label="标签" prop="tagIds">
-                <CheckboxGroup v-model="formValidate.tagIds">
-                    <Checkbox v-for="tag in tags" :label="tag.id" :key="tag.id">{{tag.name}}</Checkbox>
-                </CheckboxGroup>
-            </FormItem>
-            <FormItem label="类型" prop="flag">
-                <RadioGroup v-model="formValidate.flag">
-                    <Radio label="原创"></Radio>
-                    <Radio label="转载"></Radio>
-                    <Radio label="翻译"></Radio>
-                </RadioGroup>
-            </FormItem>
-            <FormItem label="首图" prop="firstPicture">
-                <i-input v-model="formValidate.firstPicture" placeholder="请输入博客标题..."></i-input>
-            </FormItem>
-            <FormItem label="推荐" :style="{float: 'left'}">
-                <i-switch v-model="formValidate.recommend">
-                    <span slot="true">On</span>
-                    <span slot="false">Off</span>
-                </i-switch>
-            </FormItem>
-            <FormItem label="转载声明" :style="{float: 'left'}">
-                <i-switch v-model="formValidate.shareStatement">
-                    <span slot="true">On</span>
-                    <span slot="false">Off</span>
-                </i-switch>
-            </FormItem>
-            <FormItem label="赞赏" :style="{float: 'left'}">
-                <i-switch v-model="formValidate.appreciation">
-                    <span slot="true">On</span>
-                    <span slot="false">Off</span>
-                </i-switch>
-            </FormItem>
-            <FormItem label="评论" :style="{float: 'left'}">
-                <i-switch v-model="formValidate.commentabled">
-                    <span slot="true">On</span>
-                    <span slot="false">Off</span>
-                </i-switch>
-            </FormItem>
-            <FormItem :style="{clear: 'both'}">
-                <Row type="flex" justify="end">
-                    <Button type="dashed" @click="handleSave()">保存</Button>
-                    <Button type="primary" @click="handleSubmit('formValidate')" :style="{marginLeft: '20px'}">发布</Button>
-                </Row>
-            </FormItem>
-        </Form>
-        <Spin size="large" fix v-if="loading" :style="{zIndex: 9999}"></Spin>
-    </Row>
+    <el-form
+            :model="editorForm"
+            :rules="editorRules"
+            ref="editorForm"
+            label-width="60px"
+            label-position="left">
+        <el-form-item label="标题" prop="title">
+            <el-input v-model="editorForm.title" placeholder="标题"></el-input>
+        </el-form-item>
+        <el-form-item label="编辑" prop="content">
+            <mavon-editor
+                    v-model="editorForm.content"
+                    style="max-height: 100vh"
+                    codeStyle="darcula"
+                    :tabSize="4"
+                    fontSize="15px"
+                    @save="save">
+            </mavon-editor>
+        </el-form-item>
+        <el-row>
+            <el-col :span="12">
+                <el-form-item label="分类" prop="type.id">
+                    <el-select
+                            v-model="editorForm.type.id"
+                            placeholder="请选择分类"
+                            style="width: 80%">
+                        <template v-for="type in types">
+                            <el-option :key="type.id" :label="type.name" :value="type.id"></el-option>
+                        </template>
+                    </el-select>
+                </el-form-item>
+            </el-col>
+            <el-col :span="12">
+                <el-form-item label="标签" prop="tagIds">
+                    <el-select
+                            v-model="editorForm.tagIds"
+                            multiple
+                            placeholder="请选择标签"
+                            style="width: 80%">
+                        <template v-for="tag in tags">
+                            <el-option :key="tag.id" :label="tag.name" :value="tag.id"></el-option>
+                        </template>
+                    </el-select>
+                </el-form-item>
+            </el-col>
+        </el-row>
+        <el-form-item label="类型" prop="flag">
+            <el-radio-group v-model="editorForm.flag">
+                <el-radio label="原创"></el-radio>
+                <el-radio label="转载"></el-radio>
+                <el-radio label="翻译"></el-radio>
+            </el-radio-group>
+        </el-form-item>
+        <el-form-item label="描述" prop="description">
+            <el-input
+                    type="textarea"
+                    :rows="4"
+                    placeholder="请输入内容描述"
+                    :max="200"
+                    v-model="editorForm.description">
+            </el-input>
+        </el-form-item>
+        <el-form-item label="首图" prop="firstPicture">
+            <el-input v-model="editorForm.firstPicture" placeholder="首图链接"></el-input>
+        </el-form-item>
+        <el-row type="flex" justify="start">
+            <el-form-item label="评论" label-width="40px" style="margin-left: 10px">
+                <el-switch
+                        v-model="editorForm.commentabled"
+                        active-color="#13ce66"
+                        inactive-color="#ff4949">
+                </el-switch>
+            </el-form-item>
+            <el-form-item label="转载声明" label-width="70px" style="margin-left: 10px">
+                <el-switch
+                        v-model="editorForm.shareStatement"
+                        active-color="#13ce66"
+                        inactive-color="#ff4949">
+                </el-switch>
+            </el-form-item>
+            <el-form-item label="推荐" label-width="40px" style="margin-left: 10px">
+                <el-switch
+                        v-model="editorForm.recommend"
+                        active-color="#13ce66"
+                        inactive-color="#ff4949">
+                </el-switch>
+            </el-form-item>
+            <el-form-item label="赞赏" label-width="40px" style="margin-left: 10px">
+                <el-switch
+                        v-model="editorForm.appreciation"
+                        active-color="#13ce66"
+                        inactive-color="#ff4949">
+                </el-switch>
+            </el-form-item>
+        </el-row>
+        <el-form-item style="text-align: right">
+            <el-button @click="handleSubmit('editorForm', false)">保 存</el-button>
+            <el-button type="primary" @click="handleSubmit('editorForm', true)">发 布</el-button>
+        </el-form-item>
+    </el-form>
 </template>
 <script>
+    import DATA from '../data'
+    import {transformEditorPost} from "../../util/util";
     export default {
         data () {
             return {
                 types: [],
                 tags: [],
-                formValidate: {
-                    id: '',
-                    title: '',
-                    content: '',
-                    typeId: '',
-                    tagIds: [],
-                    flag: '',
-                    firstPicture: '',
-                    recommend: true,
-                    shareStatement: true,
-                    appreciation: true,
-                    commentabled: true,
-                    published: ''
-                },
-                ruleValidate: {
-                    title: [
-                        { required: true, message: '标题不能为空', trigger: 'blur' }
-                    ],
-                    typeId: [
-                        { required: true, type: 'integer', message: '分类不能为空', trigger: 'change' }
-                    ],
-                    tagIds: [
-                        { required: true, type: 'array', min: 1, message: '至少选择一个标签', trigger: 'change' }
-                    ],
-                    flag: [
-                        { required: true, message: '类型不能为空', trigger: 'change' }
-                    ],
-                    firstPicture: [
-                        { required: true, message: '首图不能为空', trigger: 'blur' }
-                    ],
-                },
-                loading: true
+                editorForm: DATA.editorForm,
+                editorRules: DATA.editorRules,
             }
         },
         methods: {
             save () {
-                this.saveBlog(this.formValidate);
-                this.$Message.success('保存成功!');
+                this.saveStorage(this.editorForm);
+                this.$message({type: 'success', message: '保存成功!'});
             },
-            handleSubmit (name) {
-                this.$refs[name].validate((valid) => {
+            handleSubmit (formName, published) {
+                this.$refs[formName].validate((valid) => {
                     if (valid) {
-                        this.formValidate.published = true;
+                        this.editorForm.published = published;
                         this.publishBlog();
-                    } else {
-                        this.$Message.error('请填写完整!');
                     }
-                })
-            },
-            handleSave () {
-                this.formValidate.published = false;
-                this.publishBlog();
+                });
             },
             publishBlog () {
-                this.post('/admin/blogs', this.formValidate).then(res => {
+                this.post('/admin/blogs', transformEditorPost(this.editorForm)).then(res => {
                     if(res.type === 1){
-                        this.$Message.success(res.message);
-                        this.removeBlog();
+                        this.$message({type: 'success', message: res.message});
+                        this.removeStorage();
                         this.$router.push({name: 'blogs'});
                     }
-                }).catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
-                })
+                });
+            },
+            loadTypes () {
+                this.get('/admin/types/getAll', {})
+                    .then(res => {
+                        this.types = res;
+                    });
+            },
+            loadTags () {
+                this.get('/admin/tags/getAll', {})
+                    .then(res => {
+                        this.tags = res;
+                    });
+            },
+            loadLocalStorage () {
+                if (this.loadStorage() !== null) {
+                    this.editorForm = this.loadStorage();
+                }
+            },
+            loadBlog (id) {
+                this.get(`/admin/blogs/${id}/input`, {})
+                    .then(res => {
+                        this.editorForm = res;
+                    });
             }
         },
         created() {
-            this.get('/admin/types/getAll', {})
-                .then(res => {
-                    this.types = res;
-                })
-                .catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
-                });
-            this.get('/admin/tags/getAll', {})
-                .then(res => {
-                    this.tags = res;
-                })
-                .catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
-                });
+            this.$emit('startLoading');
 
-            if(this.$route.params.id === '0' && this.loadBlog() !== null){
-                this.formValidate = this.loadBlog();
+            this.loadTypes();
+            this.loadTags();
+
+            if (this.$route.params.id !== '0') {
+                this.loadBlog(this.$route.params.id)
+            } else {
+                this.loadLocalStorage();
             }
-            if(this.$route.params.id !== '0'){
-                this.get(`/admin/blogs/${this.$route.params.id}/input`, {})
-                    .then(res => {
-                        this.formValidate.id = res.id;
-                        this.formValidate.title = res.title;
-                        this.formValidate.content = res.content;
-                        this.formValidate.typeId = res.type.id;
-                        this.formValidate.tagIds = res.tagIds;
-                        this.formValidate.flag = res.flag;
-                        this.formValidate.firstPicture = res.firstPicture;
-                        this.formValidate.recommend = res.recommend;
-                        this.formValidate.shareStatement = res.shareStatement;
-                        this.formValidate.appreciation = res.appreciation;
-                        this.formValidate.commentabled = res.commentabled;
-                    })
-                    .catch(err => {
-                        // eslint-disable-next-line no-console
-                        console.log(err);
-                    })
-            }
-            this.$emit('handleActiveName', 's-2');
-            this.$emit('handleBreadCrumb', ['后台管理', '博客编辑']);
-        },
-        mounted() {
-            let that = this;
-            this.timer = setTimeout(function () {
-                that.loading = false;
-            },1000)
         },
         destroyed() {
             clearTimeout(this.timer)

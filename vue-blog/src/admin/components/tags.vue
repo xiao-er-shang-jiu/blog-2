@@ -1,126 +1,182 @@
 <template>
-    <Row :style="{width: '100%'}">
-        <Table :loading="loading" border :columns="tableHeader" :data="tableData" :style="{width: '100%'}">
-            <template slot-scope="{ row }" slot="name">
-                <strong>{{ row.name }}</strong>
-            </template>
-            <template slot-scope="{ row }" slot="action">
-                <Button type="primary" size="small" style="margin-right: 5px" @click="update1(row.id, row.name)">修改</Button>
-                <Button type="error" size="small" @click="handleDelete(row.id)">删除</Button>
-            </template>
-        </Table>
-        <br>
-        <Row>
-            <Page
-                    :current="page.current"
-                    :total="page.total"
-                    :page-size="page.pageSize"
-                    @on-change="handlePageChange"
-            ></Page>
-        </Row>
-        <Row type="flex" justify="end">
-            <Button type="primary" @click="toTypesAdd">新增</Button>
-        </Row>
-        <Modal v-model="modal_show" width="360">
-            <p slot="header" style="color:#f60;text-align:center">
-                <Icon type="ios-information-circle"></Icon>
-                <span>删除确认</span>
-            </p>
-            <div style="text-align:center">
-                <p>删除后将不可恢复</p>
-                <p>是否继续删除?</p>
-            </div>
-            <div slot="footer">
-                <Button type="error" size="large" long :loading="modal_loading" @click="delete1">删除</Button>
-            </div>
-        </Modal>
-    </Row>
+    <div>
+        <el-table :data="tableData" stripe style="width: 100%">
+            <el-table-column
+                    prop="id"
+                    label="序号"
+                    width="240">
+                <template slot-scope="scope">
+                    {{scope.$index}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="name"
+                    label="名称">
+                <template slot-scope="scope">
+                    {{scope.row.name}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    prop="count"
+                    label="文章数"
+                    width="180">
+                <template slot-scope="scope">
+                    {{scope.row.count}}
+                </template>
+            </el-table-column>
+            <el-table-column
+                    label="操作"
+                    width="240">
+                <template slot-scope="scope">
+                    <el-button
+                            size="mini"
+                            @click="handleEdit(scope.$index)">
+                        编辑</el-button>
+                    <el-popconfirm
+                            confirmButtonText='好的'
+                            cancelButtonText='不用了'
+                            icon="el-icon-info"
+                            iconColor="red"
+                            title="您确定要删除吗？"
+                            style="margin-left: 10px;"
+                            @onConfirm="handleDelete(scope.row.id, scope.row.count)">
+                        <el-button size="mini" type="danger" slot="reference">删除</el-button>
+                    </el-popconfirm>
+                </template>
+            </el-table-column>
+        </el-table>
+        <el-row style="margin-top: 20px">
+            <el-col :span="12">
+                <el-pagination
+                        background
+                        :page-size="8"
+                        :current-page.sync="page.current"
+                        layout="prev, pager, next"
+                        :total="page.total"
+                        @current-change="currentChange">
+                </el-pagination>
+            </el-col>
+            <el-col :span="12">
+                <el-button
+                        type="primary"
+                        style="float: right"
+                        @click="handleEdit(-1)">
+                    创建分类</el-button>
+            </el-col>
+        </el-row>
+        <el-dialog
+                title="创建分类"
+                :visible.sync="dialogVisible"
+                width="30%"
+                center
+                @close="clearTypeForm">
+            <el-form :model="tagForm" :rules="tagRules" ref="tagForm" @submit.native.prevent>
+                <el-form-item prop="name">
+                    <el-input v-model="tagForm.name" placeholder="分类名"></el-input>
+                </el-form-item>
+            </el-form>
+            <span slot="footer" class="dialog-footer">
+                <el-button @click="dialogVisible = false">取 消</el-button>
+                <el-button
+                        type="primary"
+                        :loading="btnLoading"
+                        @click="handleSubmit('tagForm')"
+                        @keyup.enter="handleSubmit('tagForm')">提 交</el-button>
+            </span>
+        </el-dialog>
+    </div>
 </template>
 
 <script>
+    import DATA from "../data";
+
     export default {
         name: "tags",
         data () {
             return{
-                tableHeader: [
-                    {
-                        title: '编号',
-                        key: 'id',
-                        align: 'center'
-                    },
-                    {
-                        title: '标签名称',
-                        slot: 'name',
-                        align: 'center'
-                    },
-                    {
-                        title: '操作',
-                        slot: 'action',
-                        width: 300,
-                        align: 'center'
-                    }
-                ],
-                tableData: [],
-                loading: true,
-                modal_show: false,
-                modal_loading: false,
-                deleteId: '',
+                dialogVisible: false,
                 page: {
                     current: 1,
-                    total: 0,
-                    pageSize: 6
-                }
+                    total: 0
+                },
+                tableData: [],
+                tagForm: DATA.tagForm,
+                tagRules: DATA.tagRules,
+                btnLoading: false
             }
         },
         methods: {
-            update1 (id, name){
-                this.$router.push({path: `/admin/tags-add/${id}/${name}`})
+            handleEdit (index){
+                if(index >= 0){
+                    this.tagForm.id = this.tableData[index].id;
+                    this.tagForm.name = this.tableData[index].name;
+                }
+                this.dialogVisible = true;
             },
-            handleDelete (id){
-                this.deleteId = id;
-                this.modal_show = true;
+            uploadLoading () {
+                this.btnLoading = true;
+                this.timer = setTimeout(() => {
+                    this.btnLoading = false;
+                    this.dialogVisible = false;
+                }, 1000)
             },
-            handlePageChange (index) {
+            handleSubmit (formName) {
+                this.$refs[formName].validate((valid) => {
+                    if (valid) {
+                        this.uploadLoading();
+                        this.uploadData();
+                    }
+                });
+            },
+            keyEnter () {
+                document.onkeydown = () => {
+                    if (window.event.keyCode === 13 && this.dialogVisible){
+                        this.handleSubmit('tagForm')
+                    }
+                };
+            },
+            clearTypeForm () {
+                this.tagForm.id = '';
+                this.tagForm.name = '';
+            },
+            currentChange (index) {
                 this.loadData(index);
             },
-            delete1 (){
-                this.modal_loading = true;
-                this.get(`/admin/tags/${this.deleteId}/delete`, {})
-                    .then(res => {
-                        this.$Message.success(res.message);
-                        this.loadData(1);
-                    })
-                    .catch(err => {
-                        // eslint-disable-next-line no-console
-                        console.log(err)
-                    })
+            handleDelete (index, count){
+                if (count > 0) {
+                    this.$message('当前标签不允许删除!')
+                    return;
+                }
+                this.get(`/admin/tags/${index}/delete`, {}).then(res => {
+                    this.$message({type: 'success', message: res.message});
+                    this.loadData(this.page.current);
+                })
             },
-            toTypesAdd () {
-                this.$router.push({path: '/admin/tags-add/-1/0'});
+            uploadData () {
+                this.post('/admin/tags/addOrUpdate', {
+                    id: this.tagForm.id,
+                    name: this.tagForm.name
+                }).then(res => {
+                    if(res.type === 1){
+                        this.$message({type: 'success', message: res.message});
+                        this.loadData(this.page.current);
+                    }
+                    else{
+                        this.$message.error(res.message);
+                    }
+                })
             },
             loadData (index) {
-                this.loading = true;
-                let that = this;
-                this.timer = setTimeout(function () {
-                    that.loading = false;
-                    that.modal_loading = false;
-                    that.modal_show = false;
-                }, 1000);
                 this.get('/admin/tags', {page: index-1}).then(res => {
                     this.tableData = res.content;
-                    this.page.current = res.number + 1;
                     this.page.total = res.totalElements;
-                }).catch(err => {
-                    // eslint-disable-next-line no-console
-                    console.log(err);
                 });
             }
         },
         created() {
-            this.loadData(1);
-            this.$emit('handleActiveName', 's-5-1');
-            this.$emit('handleOpenNames', 's-5');
-            this.$emit('handleBreadCrumb', ['后台管理', '标签管理', '标签列表']);
+            this.$emit('startLoading');
+            this.loadData(this.page.current);
+            this.keyEnter();
         },
         destroyed() {
             clearTimeout(this.timer);

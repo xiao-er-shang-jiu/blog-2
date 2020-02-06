@@ -15,6 +15,6 @@ function removeBlog() {
     storage.remove(SEARCH_kEY);
 }
 
-Vue.prototype.saveBlog = saveBlog;
-Vue.prototype.loadBlog = loadBlog;
-Vue.prototype.removeBlog = removeBlog;
+Vue.prototype.saveStorage = saveBlog;
+Vue.prototype.loadStorage = loadBlog;
+Vue.prototype.removeStorage = removeBlog;

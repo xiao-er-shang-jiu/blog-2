@@ -1,15 +1,20 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+// back
 import Login from '../admin/login'
 import AdminIndex from '../admin/index'
 import Home from '../admin/components/home'
 import blogEditor from '../admin/components/blog-editor'
 import Types from '../admin/components/types'
-import typesAdd from "../admin/components/types-add";
 import Tags from '../admin/components/tags'
-import tagsAdd from '../admin/components/tags-add'
 import Blogs from '../admin/components/blogs'
+
+// front
+import Index from '../display/index'
+import blogsIndex from '../display/components/blogs'
+import searchResult from '../display/components/search-result'
+import blogDetail from '../display/components/blog-detail'
 
 Vue.use(VueRouter)
 
@@ -23,6 +28,7 @@ const routes = [
     path: '/admin',
     name: 'admin',
     component: AdminIndex,
+    redirect: '/admin/home',
     children: [
       {
         path: 'home',
@@ -40,24 +46,37 @@ const routes = [
         component: Types
       },
       {
-        path: 'types-add/:id/:name',
-        name: 'types-add',
-        component: typesAdd
-      },
-      {
         path: 'tags',
         name: 'tags',
         component: Tags
       },
       {
-        path: 'tags-add/:id/:name',
-        name: 'tags-add',
-        component: tagsAdd
-      },
-      {
         path: 'blogs',
         name: 'blogs',
         component: Blogs
+      }
+    ]
+  },
+  {
+    path: '/',
+    name: 'index',
+    component: Index,
+    redirect: '/blogs',
+    children: [
+      {
+        path: 'blogs',
+        name: 'blogsIndex',
+        component: blogsIndex
+      },
+      {
+        path: 'search/:text',
+        name: 'search',
+        component: searchResult
+      },
+      {
+        path: 'blog-detail/:id',
+        name: 'blog-detail',
+        component: blogDetail
       }
     ]
   }

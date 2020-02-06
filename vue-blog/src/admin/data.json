@@ -1,0 +1,104 @@
+{
+  "loginForm": {
+    "username": "",
+    "password": ""
+  },
+  "loginRules": {
+    "username": [
+      { "required": true, "message": "请输入用户名", "trigger": "blur" }
+    ],
+    "password": [
+      { "required": true, "message": "请输入密码", "trigger": "blur" }
+    ]
+  },
+
+
+  "adminInfo": {
+    "nickname": "",
+    "avatar": ""
+  },
+
+
+  "typeForm": {
+    "id": "",
+    "name": ""
+  },
+  "typeRules": {
+    "name": [
+      { "required": true, "message": "请输入分类名", "trigger": "blur" }
+    ]
+  },
+
+
+  "tagForm": {
+    "id": "",
+    "name": ""
+  },
+  "tagRules": {
+    "name": [
+      { "required": true, "message": "请输入分类名", "trigger": "blur" }
+    ]
+  },
+
+
+  "editorForm": {
+    "id": "",
+    "title": "",
+    "content": "",
+    "description": "",
+    "type": {
+      "id": ""
+    },
+    "tagIds": [],
+    "flag": "",
+    "firstPicture": "",
+    "recommend": true,
+    "shareStatement": true,
+    "appreciation": true,
+    "commentabled": true,
+    "published": ""
+  },
+  "editorRules": {
+    "title": [
+      { "required": true, "message": "标题不能为空", "trigger": "blur" }
+    ],
+    "content": [
+      { "required": true, "message": "内容不能为空", "trigger": "change" }
+    ],
+    "type.id": [
+      {"required": true, "message": "分类不能为空", "trigger": "change"}
+    ],
+    "tagIds": [
+      {"required": true, "message": "标签不能为空", "trigger": "change"}
+    ],
+    "flag": [
+      { "required": true, "message": "类型不能为空", "trigger": "change" }
+    ],
+    "firstPicture": [
+      { "required": true, "message": "首图不能为空", "trigger": "blur" },
+      { "type": "url", "message": "请输入正确的链接", "trigger": [
+        "blur", "change"
+      ] }
+    ],
+    "description": [
+      { "required": true, "message": "描述不能为空", "trigger": "blur" }
+    ]
+  },
+
+
+  "postEditorData": {
+    "id": "",
+    "title": "",
+    "content": "",
+    "description": "",
+    "type.id": "",
+    "tagIds": [],
+    "flag": "",
+    "firstPicture": "",
+    "recommend": true,
+    "shareStatement": true,
+    "appreciation": true,
+    "commentabled": true,
+    "published": ""
+  }
+}
