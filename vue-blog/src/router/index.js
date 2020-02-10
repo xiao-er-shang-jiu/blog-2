@@ -15,8 +15,12 @@ import Index from '../display/index'
 import blogsIndex from '../display/components/blogs'
 import searchResult from '../display/components/search-result'
 import blogDetail from '../display/components/blog-detail'
+import typesIndex from '../display/components/types'
+import tagIndex from '../display/components/tags'
+import Archives from '../display/components/archives'
+import About from '../display/components/about'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -77,6 +81,26 @@ const routes = [
         path: 'blog-detail/:id',
         name: 'blog-detail',
         component: blogDetail
+      },
+      {
+        path: 'types/:id',
+        name: 'typesIndex',
+        component: typesIndex
+      },
+      {
+        path: 'tags/:id',
+        name: 'tagIndex',
+        component: tagIndex
+      },
+      {
+        path: 'archives',
+        name: 'archives',
+        component: Archives
+      },
+      {
+        path: 'about',
+        name: 'about',
+        component: About
       }
     ]
   }
@@ -87,6 +111,6 @@ const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
 export default router

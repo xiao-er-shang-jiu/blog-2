@@ -11,13 +11,8 @@ import './plugins/vue-clap-button'
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
-  // chrome
-  document.body.scrollTop = 0
-  // firefox
-  document.documentElement.scrollTop = 0
-  // safari
-  window.pageYOffset = 0
-  next()
+  document.querySelector('#app').scroll({top: 0, behavior: 'smooth'});
+  next();
 });
 
 new Vue({

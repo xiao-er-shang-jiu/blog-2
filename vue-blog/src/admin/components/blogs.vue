@@ -65,7 +65,7 @@
                     label="更新时间"
                     width="160">
                 <template slot-scope="scope">
-                    {{timeTransform(scope.row.updateTime)}}
+                    {{scope.row.updateTime}}
                 </template>
             </el-table-column>
             <el-table-column
@@ -151,8 +151,6 @@
 </template>
 
 <script>
-    import {timeFormatYMDHMS} from "../../util/util";
-
     export default {
         name: "blogs",
         data () {
@@ -171,9 +169,6 @@
             }
         },
         methods: {
-            timeTransform (time) {
-                return timeFormatYMDHMS(time)
-            },
             search () {
                 this.page.current = 1;
                 this.loadBlogs(this.page.current);

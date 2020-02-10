@@ -6,6 +6,10 @@
                 共 <span style="color: #ffd04b;font-size: 22px">{{total}}</span> 篇
             </p>
         </div>
+        <div v-if="!blogList.length" style="text-align: center;line-height: 0;">
+            <img src="../../assets/img/empty.jpg" style="width: 350px" />
+            <p style="line-height: 32px;color: #909399;font-size: 16px">暂无搜索结果...</p>
+        </div>
         <template v-for="(blog, index) in blogList">
             <el-row :key="index" type="flex" align="middle">
                 <el-col :span="15">
@@ -25,12 +29,12 @@
                             {{transformDes(blog.description)}}
                         </el-col>
                     </el-row>
-                    <el-row style="line-height: 36px;text-align: center;font-size: 13px">
+                    <el-row style="line-height: 42px;text-align: center;font-size: 13px">
                         <el-col :span="6" style="color: #00b5ad">
                             <i class="el-icon-user"></i> {{blog.user.nickname}}
                         </el-col>
                         <el-col :span="6" style="color:#909399">
-                            <i class="el-icon-time"></i> {{timeFormat(blog.createTime)}}
+                            <i class="el-icon-time"></i> {{blog.createTime.substring(0, 10)}}
                         </el-col>
                         <el-col :span="3" style="color:#909399">
                             <i class="el-icon-view"></i> {{blog.views}}
@@ -39,7 +43,11 @@
                             <i class="el-icon-thumb"></i> {{blog.admire}}
                         </el-col>
                         <el-col :span="6">
-                            <el-tag :type="tagColor[parseInt(Math.random()*5,0)]">{{blog.type.name}}</el-tag>
+                            <el-tag
+                                    style="cursor: pointer"
+                                    :type="tagColor[parseInt(Math.random()*5,0)]"
+                                    @click="$router.push({path: `/types/${blog.type.id}`})"
+                            >{{blog.type.name}}</el-tag>
                         </el-col>
                     </el-row>
                 </el-col>
@@ -53,11 +61,8 @@
             </el-row>
             <el-divider :key="index"></el-divider>
         </template>
-        <div v-if="!blogList.length" style="text-align: center;line-height: 0;">
-            <img src="../../assets/img/empty.jpg" style="width: 350px" />
-            <p style="line-height: 32px;color: #909399;font-size: 18px">暂无搜索结果...</p>
-        </div>
         <el-pagination
+                v-if="blogList.length"
                 background
                 :page-size="6"
                 layout="prev, pager, next"
@@ -68,7 +73,6 @@
 </template>
 
 <script>
-    import {timeFormatYMD} from "../../util/util";
     export default {
         name: "search-result",
         data () {
@@ -79,9 +83,6 @@
             }
         },
         methods: {
-            timeFormat (time) {
-                return timeFormatYMD(time);
-            },
             transformDes (des) {
                 if (des.length >= 150) {
                     des = des.substring(1, 150) + "...";

@@ -1,13 +1,13 @@
 <template>
     <el-card>
-        <div slot="header" class="clearfix">
+        <div slot="header">
             <h2 style="color: #ffd04b;display: inline-block;margin: 0">博客</h2>
             <p style="float: right;margin: 0">
                 共 <span style="color: #ffd04b;font-size: 22px">{{total}}</span> 篇
             </p>
         </div>
         <template v-for="(blog, index) in blogList">
-            <el-row :key="index" type="flex" align="middle">
+            <el-row :key="blog.id" type="flex" align="middle">
                 <el-col :span="15">
                     <el-row type="flex" align="middle">
                         <el-col :span="3" style="line-height: 0">
@@ -30,7 +30,7 @@
                             <i class="el-icon-user"></i> {{blog.user.nickname}}
                         </el-col>
                         <el-col :span="6" style="color:#909399">
-                            <i class="el-icon-time"></i> {{timeFormat(blog.updateTime)}}
+                            <i class="el-icon-time"></i> {{blog.updateTime.substring(0, 10)}}
                         </el-col>
                         <el-col :span="3" style="color:#909399">
                             <i class="el-icon-view"></i> {{blog.views}}
@@ -39,7 +39,11 @@
                             <i class="el-icon-thumb"></i> {{blog.admire}}
                         </el-col>
                         <el-col :span="6">
-                            <el-tag :type="tagColor[parseInt(Math.random()*5,0)]">{{blog.type.name}}</el-tag>
+                            <el-tag
+                                    style="cursor: pointer"
+                                    :type="tagColor[parseInt(Math.random()*5,0)]"
+                                    @click="$router.push({path: `/types/${blog.type.id}`})"
+                            >{{blog.type.name}}</el-tag>
                         </el-col>
                     </el-row>
                 </el-col>
@@ -64,7 +68,6 @@
 </template>
 
 <script>
-    import {timeFormatYMD} from "../../util/util";
     export default {
         name: "blogs",
         data () {
@@ -75,9 +78,6 @@
             }
         },
         methods: {
-            timeFormat (time) {
-                return timeFormatYMD(time);
-            },
             transformDes (des) {
               if (des.length >= 150) {
                   des = des.substring(1, 150) + "...";

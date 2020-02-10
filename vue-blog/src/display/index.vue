@@ -8,28 +8,29 @@
                 <el-col :span="12">
                     <el-menu
                             mode="horizontal"
-                            default-active="2"
+                            :router="true"
+                            :default-active="activeMenu"
                             background-color="#545c64"
                             text-color="#fff"
                             active-text-color="#ffd04b"
                             style="border: none">
-                        <el-menu-item index="2">
+                        <el-menu-item index="/blogs">
                             <i class="el-icon-s-home"></i>
                             <span slot="title">首页</span>
                         </el-menu-item>
-                        <el-menu-item index="3">
+                        <el-menu-item index="/types/0">
                             <i class="el-icon-notebook-1"></i>
                             <span slot="title">分类</span>
                         </el-menu-item>
-                        <el-menu-item index="4">
+                        <el-menu-item index="/tags/0">
                             <i class="el-icon-collection-tag"></i>
                             <span slot="title">标签</span>
                         </el-menu-item>
-                        <el-menu-item index="5">
+                        <el-menu-item index="/archives">
                             <i class="el-icon-collection"></i>
                             <span slot="title">归档</span>
                         </el-menu-item>
-                        <el-menu-item index="6">
+                        <el-menu-item index="/about">
                             <i class="el-icon-position"></i>
                             <span slot="title">关于我</span>
                         </el-menu-item>
@@ -96,8 +97,11 @@
                         </div>
                         <div style="border: 1px solid #EBEEF5;border-radius: 5px;font-size: 14px">
                             <template v-for="(type, index) in typeList">
-                                <div class="typeItem" :key="type.id">
-                                    {{type.name}}
+                                <div
+                                        class="typeItem"
+                                        :key="type.id"
+                                        @click="$router.push({path: `/types/${type.id}`})"
+                                    >{{type.name}}
                                     <el-tag size="mini" style="float: right">{{type.count}}</el-tag>
                                 </div>
                                 <el-divider v-if="index < 5" :key="type.id" class="divider-horizontal"></el-divider>
@@ -124,8 +128,10 @@
                             <el-tag
                                     :type="tagColor[parseInt(Math.random()*5,0)]"
                                     :key="tag.id"
-                                    style="margin: 5px;cursor: pointer">
-                                {{tag.name}}</el-tag>
+                                    size="medium"
+                                    style="margin: 5px;cursor: pointer"
+                                    @click="$router.push({path: `/tags/${tag.id}`})"
+                            >{{tag.name + ' ' + tag.count}}</el-tag>
                         </template>
                     </el-card>
                 </mochi-box>
@@ -149,21 +155,22 @@
                         </template>
                     </el-card>
                 </mochi-box>
-                <mochi-box shiba="random"
-                           style="margin-top: 10px">
-                    <el-card style="text-align: center">
-                        <el-divider class="divider-horizontal">
-                            <span style="color: #ffd04b;font-size: 15px">扫码关注我</span>
-                        </el-divider>
-                        <el-image
-                                :src="require('../assets/img/me-qrcode.png')"
-                                style="width: 120px;border-radius: 5px;border: 1px solid #DCDFE6;margin-top: 20px"
-                                lazy>
-                        </el-image>
-                        <p class="new-blog">Email: 1617721824@qq.com</p>
-                        <p class="new-blog">QQ: 1617721824</p>
-                    </el-card>
-                </mochi-box>
+                <div class="guanzhu-static" id="guanzhu">
+                    <mochi-box shiba="random">
+                        <el-card style="text-align: center">
+                            <el-divider class="divider-horizontal">
+                                <span style="color: #ffd04b;font-size: 15px">扫码关注我</span>
+                            </el-divider>
+                            <el-image
+                                    :src="require('../assets/img/me-qrcode.png')"
+                                    style="width: 120px;border-radius: 5px;border: 1px solid #DCDFE6;margin-top: 20px"
+                                    lazy>
+                            </el-image>
+                            <p class="new-blog">Email: 1617721824@qq.com</p>
+                            <p class="new-blog">QQ: 1617721824</p>
+                        </el-card>
+                    </mochi-box>
+                </div>
             </div>
         </el-main>
         <el-footer style="background: #545c64; height: 240px;margin-top:10px;">
@@ -184,9 +191,14 @@
                 </el-col>
                 <el-col :span="4" style="text-align: center">
                     <p style="color: white;font-size: 15px;margin: 0;line-height: 28px">最新博客</p>
-                    <p class="new-blog new-blog-hover">最新博客</p>
-                    <p class="new-blog">最新博客</p>
-                    <p class="new-blog">最新博客</p>
+                    <template v-for="blog in newBlogList">
+                        <p
+                                class="new-blog new-blog-hover"
+                                :key="blog.id"
+                                @click="$router.push({path: `/blog-detail/${blog.id}`})"
+                        >{{transformTitle(blog.title)}}</p>
+                    </template>
+
                 </el-col>
                 <el-col :span="1" style="height: 120px;text-align: center">
                     <el-divider direction="vertical" class="divider-vertical"></el-divider>
@@ -238,18 +250,28 @@
     import {star} from '../plugins/star'
     export default {
         name: "index",
+        props: {
+            scrollTop: {type: Number, default: 0}
+        },
         data () {
             return{
-                showMini: true,
                 searchText: '',
                 musicList: DATA.musicList,
                 typeList: [],
                 tagList: [],
                 newRecommendList: [],
-                tagColor: ['', 'success', 'info', 'warning', "danger"]
+                newBlogList: [],
+                tagColor: ['', 'success', 'info', 'warning', "danger"],
+                guanzhu: null
             }
         },
         methods: {
+            transformTitle (title) {
+                if (title.length > 10) {
+                    title = title.substr(0, 10) + '...';
+                }
+                return title;
+            },
             search () {
                 if(this.searchText !== ''){
                     this.$router.push({path: `/search/${this.searchText}`})
@@ -269,6 +291,16 @@
                 this.get('/newBlogsIndex', {}).then(res => {
                     this.newRecommendList = res;
                 });
+            },
+            loadNewBlogList () {
+                this.get('/newBlogs', {}).then(res => {
+                    this.newBlogList = res;
+                })
+            },
+            loadMusicList () {
+                this.get('/music', {}).then(res => {
+                    this.musicList = res;
+                })
             }
         },
         created() {
@@ -278,18 +310,59 @@
             this.loadTypeList();
             this.loadTagList();
             this.loadRecommendList();
+            this.loadNewBlogList();
+            this.loadMusicList();
         },
         mounted() {
             star();
+            this.guanzhu = document.getElementById('guanzhu');
         },
         components: {
             APlayer,
             MochiBox,
         },
+        computed: {
+            activeMenu () {
+                switch (this.$route.path.split('/')[1]) {
+                    case 'blogs': return '/blogs';
+                    case 'types': return '/types/0';
+                    case 'tags': return '/tags/0';
+                    case 'archives': return '/archives';
+                    case 'about': return '/about';
+                    default: return '';
+                }
+            }
+        },
+        watch: {
+            scrollTop (newVal) {
+                if (newVal >= 1100) {
+                    if (!this.guanzhu.classList.contains('guanzhu-fixed')) {
+                        this.guanzhu.classList.remove('guanzhu-static');
+                        let y = this.guanzhu.getBoundingClientRect().left;
+                        this.guanzhu.style.left = `${y}px`;
+                        this.guanzhu.classList.add('guanzhu-fixed');
+                    }
+                } else {
+                    if (!this.guanzhu.classList.contains('guanzhu-static')) {
+                        this.guanzhu.classList.remove('guanzhu-fixed');
+                        this.guanzhu.style.left = 0;
+                        this.guanzhu.classList.add('guanzhu-static');
+                    }
+                }
+            }
+        }
     }
 </script>
 
 <style scoped>
+    .guanzhu-static{
+        margin-top: 10px;
+    }
+    .guanzhu-fixed{
+        position: fixed;
+        top: 70px;
+        width: 290px;
+    }
     .header{
         background: #545c64;
         position: fixed;

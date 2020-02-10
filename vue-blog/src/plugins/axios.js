@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import axios from "axios";
 import qs from "qs";
+import router from "../router";
 
 if (process.env.NODE_ENV == 'development') {
 
@@ -12,13 +13,14 @@ if (process.env.NODE_ENV == 'development') {
 
 }else if (process.env.NODE_ENV == 'production') {
 
-  axios.defaults.baseURL = '';
+  axios.defaults.baseURL = 'http://139.224.252.53:8081';
 
 }
 
 axios.defaults.headers.get['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
 axios.defaults.timeout = 10000;
+axios.defaults.withCredentials=true;
 
 axios.interceptors.request.use(
   function(config) {
@@ -56,7 +58,7 @@ function get(url, params){
             resolve(res.data)
         }).catch(err => {
             if(err.response.status === 401){
-                window.location.href = '/login'
+                router.replace('/login')
             }
             else {
                 // eslint-disable-next-line no-console
@@ -73,7 +75,7 @@ function post(url, params){
             resolve(res.data)
         }).catch(err => {
             if(err.response.status === 401){
-                window.location.href = '/login'
+                router.replace('/login')
             }
             else {
                 // eslint-disable-next-line no-console

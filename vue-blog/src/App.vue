@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <router-view :scrollTop = "scrollTop"></router-view>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'app'
+      name: 'app',
+      data () {
+          return {
+              scrollTop: 0
+          }
+      },
+      methods: {
+          handleScroll (e) {
+             this.scrollTop = e.target.scrollTop;
+          }
+     },
+     mounted() {
+         document.querySelector('#app').addEventListener('scroll', this.handleScroll,false)
+     }
   }
 </script>
 

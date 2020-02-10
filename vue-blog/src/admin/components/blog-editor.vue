@@ -102,7 +102,7 @@
 </template>
 <script>
     import DATA from '../data'
-    import {transformEditorPost} from "../../util/util";
+    import {transformEditorPost, clearEditorForm} from "../../util/util";
     export default {
         data () {
             return {
@@ -128,8 +128,8 @@
             publishBlog () {
                 this.post('/admin/blogs', transformEditorPost(this.editorForm)).then(res => {
                     if(res.type === 1){
-                        this.$message({type: 'success', message: res.message});
                         this.removeStorage();
+                        this.$message({type: 'success', message: res.message});
                         this.$router.push({name: 'blogs'});
                     }
                 });
@@ -163,6 +163,8 @@
 
             this.loadTypes();
             this.loadTags();
+
+            clearEditorForm();
 
             if (this.$route.params.id !== '0') {
                 this.loadBlog(this.$route.params.id)

@@ -2,13 +2,13 @@
     <el-row class="page-container" type="flex" justify="center" align="middle">
         <transition-group name="bg">
             <div :key="1" v-show="bgImgIndex === 1" class="bg-container">
-                <img src="../assets/background/img/1.jpg">
+                <img src="https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/background/1.jpg">
             </div>
             <div :key="2" v-show="bgImgIndex === 2" class="bg-container">
-                <img src="../assets/background/img/2.jpg">
+                <img src="https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/background/2.jpg">
             </div>
             <div :key="3" v-show="bgImgIndex === 3" class="bg-container">
-                <img src="../assets/background/img/3.jpg">
+                <img src="https://lhy-blog.oss-cn-hangzhou.aliyuncs.com/background/3.jpg">
             </div>
         </transition-group>
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
