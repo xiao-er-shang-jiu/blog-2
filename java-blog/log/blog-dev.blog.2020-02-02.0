@@ -1,0 +1,967 @@
+2020-02-02 10:42:17.735  INFO 7876 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 7876 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-02 10:42:17.747 DEBUG 7876 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-02 10:42:17.749  INFO 7876 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 10:42:17.883  INFO 7876 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-02 10:42:17.884  INFO 7876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 10:42:17.885  INFO 7876 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 10:42:19.901  INFO 7876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-02 10:42:20.103  INFO 7876 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 172ms. Found 4 JPA repository interfaces.
+2020-02-02 10:42:20.893  INFO 7876 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 10:42:22.277  INFO 7876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 10:42:22.300  INFO 7876 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 10:42:22.304  INFO 7876 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-02 10:42:22.598  INFO 7876 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 10:42:22.599  INFO 7876 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4714 ms
+2020-02-02 10:42:23.342  INFO 7876 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-02 10:42:23.644  INFO 7876 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-02 10:42:24.096  INFO 7876 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-02 10:42:24.417  INFO 7876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 10:42:24.762  INFO 7876 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 10:42:24.827  INFO 7876 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-02 10:42:27.806  INFO 7876 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-02 10:42:27.827  INFO 7876 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 10:42:28.026  INFO 7876 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 10:42:30.155  WARN 7876 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 10:42:30.765  INFO 7876 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 10:42:31.040  INFO 7876 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 10:42:32.741  INFO 7876 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-02-02 10:42:32.746  INFO 7876 --- [restartedMain] com.lhy.blog.BlogApplication             : Started BlogApplication in 16.576 seconds (JVM running for 20.926)
+2020-02-02 10:47:43.180  INFO 7876 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-02 10:47:43.180  INFO 7876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-02 10:47:43.239  INFO 7876 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 58 ms
+2020-02-02 10:47:43.376  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/68', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[68]}
+2020-02-02 10:47:43.658  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=68, title='归并排序（分治法）', content='归并排序是利用归并的思想实现的排序方法，该算法采用经典的分治策略，分治法将问题分成一些小的问题然后递归求解，而治的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之。归并排序的时间复杂度为$$O(n\log_2n)$$。
+
+下面用一张图了解用分治法实现归并排序的过程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705102749236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+可以看到，我们将原序列不断进行二分，直至只有一个元素，得到$$n$$个只含有一个元素的序列，再将这$$n$$个需序列不断地两两合并，最终得到一个有序的序列。
+
+这个过程中，合并是实现排序的关键过程，我们是这样实现合并相邻子序列的：
+
+我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将`[4,5,7,8]`和`[1,2,3,6]`两个已经有序的子序列，合并为最终序列`[1,2,3,4,5,6,7,8]`，来看下实现步骤。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705105338282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+这个过程很简单，只要比较两个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可，合并的代码如下：
+```cpp
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+```
+这里用到了辅助数组`temp[]`暂存合并生成的序列，合并完毕后再通过`temp[]`修改，其中`[left, mid]`表示第一个序列，`[mid+1, right]`表示第二个序列。
+
+以下给出递归实现的完整码：
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int left, int right){
+    if(left == right)
+        return;
+    int mid = (left + right)/2;
+    MergeSort(arr, left, mid);				//二分
+    MergeSort(arr, mid+1, right);			//二分
+    MergeSortArr(arr, left, mid, right);	//归并
+    for(int i=0; i<10; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 0, 9);
+}
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705121050166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+归并排序也可以用非递归实现，实现的过程与递归有所不同，不同之处就在于“分”的阶段，从以上递归思路中可以发现，“分”的最终结果是将`n`为数组分成`n`组，即每组只包含一个元素，那么这一过程是不是可以省略呢？答案是可以的，非递归就可以略掉这一过程；
+
+非递归实现的函数如下：
+
+```cpp
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;//这里的mid不能等于(left+right)/2，具体原因可仔细模拟这一过程
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+```
+
+以下给出非递归实现的完整代码：
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 10);
+}
+
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717084218838.png)
+可以仔细对比两种方法的输出结果，生成的中间序列是有区别的。', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}
+2020-02-02 10:48:32.171  INFO 7876 --- [http-nio-8080-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/68', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[68]}
+2020-02-02 10:48:32.182  INFO 7876 --- [http-nio-8080-exec-2] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=68, title='归并排序（分治法）', content='归并排序是利用归并的思想实现的排序方法，该算法采用经典的分治策略，分治法将问题分成一些小的问题然后递归求解，而治的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之。归并排序的时间复杂度为$$O(n\log_2n)$$。
+
+下面用一张图了解用分治法实现归并排序的过程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705102749236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+可以看到，我们将原序列不断进行二分，直至只有一个元素，得到$$n$$个只含有一个元素的序列，再将这$$n$$个需序列不断地两两合并，最终得到一个有序的序列。
+
+这个过程中，合并是实现排序的关键过程，我们是这样实现合并相邻子序列的：
+
+我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将`[4,5,7,8]`和`[1,2,3,6]`两个已经有序的子序列，合并为最终序列`[1,2,3,4,5,6,7,8]`，来看下实现步骤。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705105338282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+这个过程很简单，只要比较两个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可，合并的代码如下：
+```cpp
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+```
+这里用到了辅助数组`temp[]`暂存合并生成的序列，合并完毕后再通过`temp[]`修改，其中`[left, mid]`表示第一个序列，`[mid+1, right]`表示第二个序列。
+
+以下给出递归实现的完整码：
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int left, int right){
+    if(left == right)
+        return;
+    int mid = (left + right)/2;
+    MergeSort(arr, left, mid);				//二分
+    MergeSort(arr, mid+1, right);			//二分
+    MergeSortArr(arr, left, mid, right);	//归并
+    for(int i=0; i<10; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 0, 9);
+}
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705121050166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+归并排序也可以用非递归实现，实现的过程与递归有所不同，不同之处就在于“分”的阶段，从以上递归思路中可以发现，“分”的最终结果是将`n`为数组分成`n`组，即每组只包含一个元素，那么这一过程是不是可以省略呢？答案是可以的，非递归就可以略掉这一过程；
+
+非递归实现的函数如下：
+
+```cpp
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;//这里的mid不能等于(left+right)/2，具体原因可仔细模拟这一过程
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+```
+
+以下给出非递归实现的完整代码：
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 10);
+}
+
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717084218838.png)
+可以仔细对比两种方法的输出结果，生成的中间序列是有区别的。', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}
+2020-02-02 10:50:58.999  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/68', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[68]}
+2020-02-02 10:50:59.020  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=68, title='归并排序（分治法）', content='归并排序是利用归并的思想实现的排序方法，该算法采用经典的分治策略，分治法将问题分成一些小的问题然后递归求解，而治的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之。归并排序的时间复杂度为$$O(n\log_2n)$$。
+
+下面用一张图了解用分治法实现归并排序的过程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705102749236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+可以看到，我们将原序列不断进行二分，直至只有一个元素，得到$$n$$个只含有一个元素的序列，再将这$$n$$个需序列不断地两两合并，最终得到一个有序的序列。
+
+这个过程中，合并是实现排序的关键过程，我们是这样实现合并相邻子序列的：
+
+我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将`[4,5,7,8]`和`[1,2,3,6]`两个已经有序的子序列，合并为最终序列`[1,2,3,4,5,6,7,8]`，来看下实现步骤。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705105338282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+这个过程很简单，只要比较两个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可，合并的代码如下：
+```cpp
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+```
+这里用到了辅助数组`temp[]`暂存合并生成的序列，合并完毕后再通过`temp[]`修改，其中`[left, mid]`表示第一个序列，`[mid+1, right]`表示第二个序列。
+
+以下给出递归实现的完整码：
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int left, int right){
+    if(left == right)
+        return;
+    int mid = (left + right)/2;
+    MergeSort(arr, left, mid);				//二分
+    MergeSort(arr, mid+1, right);			//二分
+    MergeSortArr(arr, left, mid, right);	//归并
+    for(int i=0; i<10; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 0, 9);
+}
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705121050166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+归并排序也可以用非递归实现，实现的过程与递归有所不同，不同之处就在于“分”的阶段，从以上递归思路中可以发现，“分”的最终结果是将`n`为数组分成`n`组，即每组只包含一个元素，那么这一过程是不是可以省略呢？答案是可以的，非递归就可以略掉这一过程；
+
+非递归实现的函数如下：
+
+```cpp
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;//这里的mid不能等于(left+right)/2，具体原因可仔细模拟这一过程
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+```
+
+以下给出非递归实现的完整代码：
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 10);
+}
+
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717084218838.png)
+可以仔细对比两种方法的输出结果，生成的中间序列是有区别的。', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}
+2020-02-02 10:51:32.145  INFO 7876 --- [http-nio-8080-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/68', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[68]}
+2020-02-02 10:51:32.153  INFO 7876 --- [http-nio-8080-exec-4] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=68, title='归并排序（分治法）', content='归并排序是利用归并的思想实现的排序方法，该算法采用经典的分治策略，分治法将问题分成一些小的问题然后递归求解，而治的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之。归并排序的时间复杂度为$$O(n\log_2n)$$。
+
+下面用一张图了解用分治法实现归并排序的过程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705102749236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+可以看到，我们将原序列不断进行二分，直至只有一个元素，得到$$n$$个只含有一个元素的序列，再将这$$n$$个需序列不断地两两合并，最终得到一个有序的序列。
+
+这个过程中，合并是实现排序的关键过程，我们是这样实现合并相邻子序列的：
+
+我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将`[4,5,7,8]`和`[1,2,3,6]`两个已经有序的子序列，合并为最终序列`[1,2,3,4,5,6,7,8]`，来看下实现步骤。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705105338282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+这个过程很简单，只要比较两个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可，合并的代码如下：
+```cpp
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+```
+这里用到了辅助数组`temp[]`暂存合并生成的序列，合并完毕后再通过`temp[]`修改，其中`[left, mid]`表示第一个序列，`[mid+1, right]`表示第二个序列。
+
+以下给出递归实现的完整码：
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int left, int right){
+    if(left == right)
+        return;
+    int mid = (left + right)/2;
+    MergeSort(arr, left, mid);				//二分
+    MergeSort(arr, mid+1, right);			//二分
+    MergeSortArr(arr, left, mid, right);	//归并
+    for(int i=0; i<10; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 0, 9);
+}
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705121050166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+归并排序也可以用非递归实现，实现的过程与递归有所不同，不同之处就在于“分”的阶段，从以上递归思路中可以发现，“分”的最终结果是将`n`为数组分成`n`组，即每组只包含一个元素，那么这一过程是不是可以省略呢？答案是可以的，非递归就可以略掉这一过程；
+
+非递归实现的函数如下：
+
+```cpp
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;//这里的mid不能等于(left+right)/2，具体原因可仔细模拟这一过程
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+```
+
+以下给出非递归实现的完整代码：
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 10);
+}
+
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717084218838.png)
+可以仔细对比两种方法的输出结果，生成的中间序列是有区别的。', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}
+2020-02-02 11:00:25.953  INFO 7876 --- [http-nio-8080-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-02 11:00:25.955  INFO 7876 --- [http-nio-8080-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-02 11:00:25.962  INFO 7876 --- [http-nio-8080-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-02 11:00:25.984  INFO 7876 --- [http-nio-8080-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 5, sort: updateTime: DESC]]}
+2020-02-02 11:00:25.998  WARN 7876 --- [http-nio-8080-exec-6] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-02 11:00:25.999  WARN 7876 --- [http-nio-8080-exec-7] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-02 11:00:26.040  INFO 7876 --- [http-nio-8080-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2020-02-01 11:13:56.093}, Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2020-02-01 11:13:10.148}, Blog{id=65, title='css实现摩天轮动画', content='null', firstPicture='https://picsum.photos/id/1039/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:24:16.304, updateTime=2020-02-01 11:12:53.79}, Blog{id=61, title='css模拟云朵效果', content='null', firstPicture='https://picsum.photos/id/1036/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:21:23.229, updateTime=2020-01-31 19:52:49.535}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2020-01-31 19:52:21.598}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2020-01-31 19:49:19.653}]
+2020-02-02 11:00:26.085  INFO 7876 --- [http-nio-8080-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=44, name='PAT（甲级）'}, Type{id=48, name='填坑笔记'}]
+2020-02-02 11:00:26.090  INFO 7876 --- [http-nio-8080-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=66, name='CSS3'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}]
+2020-02-02 11:00:26.093  INFO 7876 --- [http-nio-8080-exec-5] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 3 containing com.lhy.blog.po.Blog instances
+2020-02-02 11:00:32.680  INFO 7876 --- [http-nio-8080-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-02 11:00:32.690  INFO 7876 --- [http-nio-8080-exec-9] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-02 14:32:41.458  INFO 7876 --- [http-nio-8080-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-02 14:32:41.458  INFO 7876 --- [http-nio-8080-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 5, sort: updateTime: DESC]]}
+2020-02-02 14:32:41.458  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-02 14:32:41.458  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-02 14:32:41.510  INFO 7876 --- [http-nio-8080-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2020-02-01 11:13:56.093}, Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2020-02-01 11:13:10.148}, Blog{id=65, title='css实现摩天轮动画', content='null', firstPicture='https://picsum.photos/id/1039/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:24:16.304, updateTime=2020-02-01 11:12:53.79}, Blog{id=61, title='css模拟云朵效果', content='null', firstPicture='https://picsum.photos/id/1036/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:21:23.229, updateTime=2020-01-31 19:52:49.535}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2020-01-31 19:52:21.598}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2020-01-31 19:49:19.653}]
+2020-02-02 14:32:41.553  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=44, name='PAT（甲级）'}, Type{id=48, name='填坑笔记'}]
+2020-02-02 14:32:41.556  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=66, name='CSS3'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}]
+2020-02-02 14:32:41.567  INFO 7876 --- [http-nio-8080-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 3 containing com.lhy.blog.po.Blog instances
+2020-02-02 14:32:58.468  INFO 7876 --- [http-nio-8080-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-02 14:32:58.468  INFO 7876 --- [http-nio-8080-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 5, sort: updateTime: DESC]]}
+2020-02-02 14:32:58.484  INFO 7876 --- [http-nio-8080-exec-4] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 3 containing com.lhy.blog.po.Blog instances
+2020-02-02 14:32:58.496  INFO 7876 --- [http-nio-8080-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=44, name='PAT（甲级）'}, Type{id=48, name='填坑笔记'}]
+2020-02-02 14:32:58.508  INFO 7876 --- [http-nio-8080-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-02 14:32:58.539  INFO 7876 --- [http-nio-8080-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=66, name='CSS3'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}]
+2020-02-02 14:32:58.844  INFO 7876 --- [http-nio-8080-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-02 14:32:58.861  INFO 7876 --- [http-nio-8080-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2020-02-01 11:13:56.093}, Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2020-02-01 11:13:10.148}, Blog{id=65, title='css实现摩天轮动画', content='null', firstPicture='https://picsum.photos/id/1039/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:24:16.304, updateTime=2020-02-01 11:12:53.79}, Blog{id=61, title='css模拟云朵效果', content='null', firstPicture='https://picsum.photos/id/1036/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:21:23.229, updateTime=2020-01-31 19:52:49.535}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2020-01-31 19:52:21.598}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2020-01-31 19:49:19.653}]
+2020-02-02 14:35:25.310  INFO 7876 --- [http-nio-8080-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-02 14:35:25.310  INFO 7876 --- [http-nio-8080-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 5, sort: updateTime: DESC]]}
+2020-02-02 14:35:25.312  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-02 14:35:25.322  INFO 7876 --- [http-nio-8080-exec-5] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 3 containing com.lhy.blog.po.Blog instances
+2020-02-02 14:35:25.331  INFO 7876 --- [http-nio-8080-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=44, name='PAT（甲级）'}, Type{id=48, name='填坑笔记'}]
+2020-02-02 14:35:25.338  INFO 7876 --- [http-nio-8080-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=66, name='CSS3'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}]
+2020-02-02 14:35:25.661  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-02 14:35:25.673  INFO 7876 --- [http-nio-8080-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2020-02-01 11:13:56.093}, Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2020-02-01 11:13:10.148}, Blog{id=65, title='css实现摩天轮动画', content='null', firstPicture='https://picsum.photos/id/1039/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:24:16.304, updateTime=2020-02-01 11:12:53.79}, Blog{id=61, title='css模拟云朵效果', content='null', firstPicture='https://picsum.photos/id/1036/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:21:23.229, updateTime=2020-01-31 19:52:49.535}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2020-01-31 19:52:21.598}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2020-01-31 19:49:19.653}]
+2020-02-02 14:36:13.364  INFO 7876 --- [http-nio-8080-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8080/blog/68', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[68]}
+2020-02-02 14:36:13.372  INFO 7876 --- [http-nio-8080-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=68, title='归并排序（分治法）', content='归并排序是利用归并的思想实现的排序方法，该算法采用经典的分治策略，分治法将问题分成一些小的问题然后递归求解，而治的阶段则将分的阶段得到的各答案"修补"在一起，即分而治之。归并排序的时间复杂度为$$O(n\log_2n)$$。
+
+下面用一张图了解用分治法实现归并排序的过程：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705102749236.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+可以看到，我们将原序列不断进行二分，直至只有一个元素，得到$$n$$个只含有一个元素的序列，再将这$$n$$个需序列不断地两两合并，最终得到一个有序的序列。
+
+这个过程中，合并是实现排序的关键过程，我们是这样实现合并相邻子序列的：
+
+我们需要将两个已经有序的子序列合并成一个有序序列，比如上图中的最后一次合并，要将`[4,5,7,8]`和`[1,2,3,6]`两个已经有序的子序列，合并为最终序列`[1,2,3,4,5,6,7,8]`，来看下实现步骤。
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705105338282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+这个过程很简单，只要比较两个数列的第一个数，谁小就先取谁，取了后就在对应数列中删除这个数。然后再进行比较，如果有数列为空，那直接将另一个数列的数据依次取出即可，合并的代码如下：
+```cpp
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+```
+这里用到了辅助数组`temp[]`暂存合并生成的序列，合并完毕后再通过`temp[]`修改，其中`[left, mid]`表示第一个序列，`[mid+1, right]`表示第二个序列。
+
+以下给出递归实现的完整码：
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int left, int right){
+    if(left == right)
+        return;
+    int mid = (left + right)/2;
+    MergeSort(arr, left, mid);				//二分
+    MergeSort(arr, mid+1, right);			//二分
+    MergeSortArr(arr, left, mid, right);	//归并
+    for(int i=0; i<10; i++){
+        printf("%d ", arr[i]);
+    }
+    printf("\n");
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 0, 9);
+}
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190705121050166.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+归并排序也可以用非递归实现，实现的过程与递归有所不同，不同之处就在于“分”的阶段，从以上递归思路中可以发现，“分”的最终结果是将`n`为数组分成`n`组，即每组只包含一个元素，那么这一过程是不是可以省略呢？答案是可以的，非递归就可以略掉这一过程；
+
+非递归实现的函数如下：
+
+```cpp
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;//这里的mid不能等于(left+right)/2，具体原因可仔细模拟这一过程
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+```
+
+以下给出非递归实现的完整代码：
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int n){
+    int left, mid, right;
+    for(int i=2; ; i*=2){   //这里循环结束条件放到了最后，因为当i>n时还要进行一次排序
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2:n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+            MergeSortArr(arr, left, mid, right);
+        }
+        for(int k=0; k<n; k++){
+            printf("%d ", arr[k]);
+        }
+        printf("\n");
+        if(i > n)
+            break;
+    }
+}
+
+int main(){
+    int arr[10] = {3, 1, 2, 8, 7, 5, 9, 4, 0, 6};
+    MergeSort(arr, 10);
+}
+
+```
+输出结果如下：
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190717084218838.png)
+可以仔细对比两种方法的输出结果，生成的中间序列是有区别的。', firstPicture='https://picsum.photos/id/1043/800/450', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2020-02-01 11:14:13.236}
+2020-02-02 20:57:30.066  INFO 11588 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 11588 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-02 20:57:30.076 DEBUG 11588 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-02 20:57:30.077  INFO 11588 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-02 20:57:30.209  INFO 11588 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-02 20:57:30.210  INFO 11588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-02 20:57:30.210  INFO 11588 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-02 20:57:32.311  INFO 11588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-02 20:57:32.572  INFO 11588 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 234ms. Found 5 JPA repository interfaces.
+2020-02-02 20:57:33.809  INFO 11588 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-02 20:57:35.270  INFO 11588 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-02-02 20:57:35.301  INFO 11588 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-02 20:57:35.304  INFO 11588 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-02 20:57:35.557  INFO 11588 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-02 20:57:35.558  INFO 11588 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5348 ms
+2020-02-02 20:57:36.194  INFO 11588 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-02 20:57:36.434  INFO 11588 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-02 20:57:36.817  INFO 11588 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-02 20:57:37.109  INFO 11588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-02 20:57:37.424  INFO 11588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-02 20:57:37.471  INFO 11588 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-02 20:57:40.243  INFO 11588 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-02 20:57:40.269  INFO 11588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 20:57:40.622  INFO 11588 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-02 20:57:42.782  WARN 11588 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-02 20:57:43.219  INFO 11588 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-02 20:57:43.441  INFO 11588 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-02 20:57:44.670  INFO 11588 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-02-02 20:57:44.686  INFO 11588 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-02-02 20:57:44.696 ERROR 11588 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-02-02 20:57:44.700  INFO 11588 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-02 20:57:44.701  INFO 11588 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-02 20:57:44.706  INFO 11588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-02 20:57:44.724  INFO 11588 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

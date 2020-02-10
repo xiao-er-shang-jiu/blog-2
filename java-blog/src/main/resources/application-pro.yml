@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://139.224.252.53:3306/blog?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: lhy
+    password: lhy152342613
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+logging:
+  level:
+    root: warn
+    com.lhy.blog: debug
+  file: log/blog.blog
+
+server:
+  port: 8081

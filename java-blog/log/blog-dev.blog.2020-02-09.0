@@ -1,0 +1,1465 @@
+2020-02-09 11:18:38.516  INFO 8448 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 8448 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-09 11:18:38.524 DEBUG 8448 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-09 11:18:38.537  INFO 8448 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-09 11:18:38.622  INFO 8448 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-09 11:18:38.623  INFO 8448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-09 11:18:38.623  INFO 8448 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-09 11:18:40.153  INFO 8448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-09 11:18:40.292  INFO 8448 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126ms. Found 5 JPA repository interfaces.
+2020-02-09 11:18:40.851  INFO 8448 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 11:18:41.674  INFO 8448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-02-09 11:18:41.692  INFO 8448 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 11:18:41.692  INFO 8448 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-09 11:18:41.925  INFO 8448 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 11:18:41.930  INFO 8448 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3307 ms
+2020-02-09 11:18:42.269  INFO 8448 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-09 11:18:42.405  INFO 8448 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-09 11:18:42.635  INFO 8448 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-09 11:18:42.799  INFO 8448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-09 11:18:42.989  INFO 8448 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-09 11:18:43.021  INFO 8448 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-09 11:18:44.468  INFO 8448 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-09 11:18:44.477  INFO 8448 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 11:18:44.583  INFO 8448 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-09 11:18:46.055  WARN 8448 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-09 11:18:46.373  INFO 8448 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-09 11:18:46.532  INFO 8448 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-02-09 11:18:47.546  INFO 8448 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-02-09 11:18:47.550  INFO 8448 --- [restartedMain] com.lhy.blog.BlogApplication             : Started BlogApplication in 10.594 seconds (JVM running for 14.989)
+2020-02-09 11:21:10.442  INFO 8448 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-09 11:21:10.443  INFO 8448 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-09 11:21:10.481  INFO 8448 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 38 ms
+2020-02-09 11:21:10.554  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:21:10.554  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:21:10.555  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:21:10.555  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:21:10.558  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 11:21:10.594  WARN 8448 --- [http-nio-8081-exec-3] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 11:21:10.595  WARN 8448 --- [http-nio-8081-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 11:21:10.750  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=8, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:21:10.752  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:21:10.757  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=8, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:21:10.782  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 11:21:10.789  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:21:32.508  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:21:32.509  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:21:32.546  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:21:32.550  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=9, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:27:44.343  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:27:44.348  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:27:44.353  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:27:44.348  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:27:44.364  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:27:44.375  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=9, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:27:44.377  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=9, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:27:44.389  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:27:44.394  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=10, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:27:44.396  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:27:44.422  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:27:44.429  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:35:25.068  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:35:25.086  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:35:25.089  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:35:25.090  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:35:25.104  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=10, appreciation=false, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:35:25.130  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:35:25.131  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:35:25.130  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:35:25.132  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:35:25.135  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:35:25.142  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=11, appreciation=false, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:35:25.144  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=10, appreciation=false, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:35:48.874  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:35:48.884  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:35:48.894  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:35:48.908  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:35:48.916  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:35:48.917  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:35:48.920  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:35:48.927  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=12, appreciation=true, shareStatement=false, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:35:48.927  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=12, appreciation=true, shareStatement=false, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:35:48.929  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=11, appreciation=true, shareStatement=false, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:35:48.932  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:35:48.936  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:37:04.884  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:37:04.885  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:37:04.887  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:37:04.900  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:37:04.900  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=12, appreciation=true, shareStatement=true, commentabled=false, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:37:04.927  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:37:04.929  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:37:04.912  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:37:04.931  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:37:04.951  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:37:04.955  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=12, appreciation=true, shareStatement=true, commentabled=false, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:37:04.966  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=13, appreciation=true, shareStatement=true, commentabled=false, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:37:26.549  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 11:37:26.549  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 11:37:26.559  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 11:37:26.564  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:37:26.571  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 11:37:26.573  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=13, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 11:37:26.576  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 11:37:26.583  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=13, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 11:37:26.606  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 11:37:26.607  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 11:37:26.619  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 11:37:26.623  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 11:37:58.930  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.types', args=[]}
+2020-02-09 11:37:58.940  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 11:37:58.962  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 11:37:58.974  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 1 containing com.lhy.blog.po.Blog instances
+2020-02-09 11:38:00.264  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.types', args=[]}
+2020-02-09 11:38:00.265  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 11:38:00.308  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}, Tag{id=66, name='CSS3'}]
+2020-02-09 11:38:00.327  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 11:38:00.869  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/archives', ip='127.0.0.1', classMethod='com.lhy.blog.web.ArchiveController.archives', args=[]}
+2020-02-09 11:38:00.888  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : {2016=[Blog{id=132, title='123', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-02-04 14:40:08.158, updateTime=2016-01-01 14:43:27.0}], 2017=[Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/900/600', flag='原创', views=5, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2017-03-06 17:27:24.0}], 2018=[Blog{id=83, title='1025 反转链表 (25 分)', content='null', firstPicture='https://picsum.photos/id/1051/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:50:46.363, updateTime=2018-02-01 23:38:26.0}], 2019=[Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}], 2020=[Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}]}
+2020-02-09 13:22:41.479  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:22:41.479  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:22:41.505  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:22:41.509  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:22:41.510  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:22:41.518  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:22:41.523  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:22:41.524  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:24:15.577  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:24:15.577  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:24:15.610  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:24:15.637  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:24:15.616  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:24:15.650  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:24:15.657  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:24:15.664  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:40:07.549  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:40:07.552  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:40:07.566  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:40:07.571  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:40:07.573  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:40:07.576  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:40:07.583  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:40:07.588  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:40:53.663  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:40:53.666  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:40:53.674  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:40:53.677  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:40:53.686  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:40:53.686  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:40:53.698  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:40:53.707  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:41:14.972  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:41:14.973  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:41:14.990  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:41:14.998  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:41:15.006  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:41:15.007  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:41:15.013  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:41:15.018  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:41:46.642  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:41:46.654  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:41:46.660  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:41:46.681  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:41:46.696  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:41:46.697  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:41:46.702  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:41:46.702  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:56:00.775  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 13:56:00.775  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 13:56:00.788  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:56:00.788  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 13:56:00.794  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 13:56:00.797  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 13:56:00.798  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 13:56:00.807  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 13:56:00.811  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 13:56:00.836  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:56:08.406  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.types', args=[]}
+2020-02-09 13:56:08.407  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 13:56:08.423  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:56:08.425  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 1 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:56:10.432  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.types', args=[]}
+2020-02-09 13:56:10.435  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 13:56:10.455  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}, Tag{id=66, name='CSS3'}]
+2020-02-09 13:56:10.463  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:56:11.455  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/archives', ip='127.0.0.1', classMethod='com.lhy.blog.web.ArchiveController.archives', args=[]}
+2020-02-09 13:56:11.465  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : {2016=[Blog{id=132, title='123', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-02-04 14:40:08.158, updateTime=2016-01-01 14:43:27.0}], 2017=[Blog{id=68, title='归并排序（分治法）', content='null', firstPicture='https://picsum.photos/id/1043/900/600', flag='原创', views=5, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 10:58:37.837, updateTime=2017-03-06 17:27:24.0}], 2018=[Blog{id=83, title='1025 反转链表 (25 分)', content='null', firstPicture='https://picsum.photos/id/1051/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:50:46.363, updateTime=2018-02-01 23:38:26.0}], 2019=[Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}], 2020=[Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=14, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=1, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}]}
+2020-02-09 13:56:15.877  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.types', args=[]}
+2020-02-09 13:56:15.885  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 13:56:15.894  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}, Tag{id=66, name='CSS3'}]
+2020-02-09 13:56:15.905  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:56:31.549  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 13:56:31.549  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 13:56:31.570  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 13:56:31.579  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=15, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 13:56:39.100  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/58', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[58]}
+2020-02-09 13:56:39.108  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/58', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[58]}
+2020-02-09 13:56:39.115  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 13:56:39.115  INFO 8448 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='#### 题目
+有一个大小为$$N\times M$$的园子，雨后积起了水。八连通的积水被认为是连接在一起的。请求出园子里总共有多少水洼？八连通指的是下图中相对`W`的`*`的部分，`'W'`表示积水，`'*'`表示没有积水；
+>`***`
+>`*W*`
+>`***`
+
+#### 输入
+>$$N=10,M=12$$
+>`W********WW*`
+>`*WWW*****WWW`
+>`****WW***WW*`
+>`*********WW*`
+>`*********W**`
+>`**W******W**`
+>`*W*W*****WW*`
+>`W*W*W*****W*`
+>`*W*W******W*`
+>`**W*******W*`
+
+#### 输出
+>3
+
+#### 分析
+采用深度优先搜索的思路，从任意的`W`位置开始，不停的把邻接的`W`替换成`*`，1次`dfs()`之后与初始的这个`W`相连的所有`W`就都被替换成了`*`，循环遍历数组，直至没有`W`，那么总共进行的`dfs()`的次数就是连通的积水数。
+
+8个方向共对应了8种状态转移，每个格子作为`dfs()`的参数至多被调用一次（即若当前格子满足`dfs()`条件，则`dfs()`中又会有8次循环），所以时间复杂度为$$O(8\times N\times M)=O(N\times M)$$。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+#define MAX_SIZE 100
+
+char field[MAX_SIZE][MAX_SIZE+1];
+
+void dfs(int x, int y, int n, int m){
+    field[x][y] = '*';	//把当前位置替换成'*'
+    for(int dx=-1; dx<=1; dx++){	//循环遍历8个方向
+        for(int dy=-1; dy<=1; dy++){
+            int nx = x + dx, ny = y + dy;	//下一个位置
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && field[nx][ny] == 'W')
+                dfs(nx, ny, n, m);	//若满足条件，再次进行dfs
+        }
+    }
+}
+
+int main(){
+    int n, m, res = 0;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", field[i]);
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(field[i][j] == 'W'){
+                dfs(i, j, n, m);	//满足条件，进行dfs
+                res++;
+            }
+        }
+    }
+    printf("%d\n", res);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190727163514235.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)
+', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}
+2020-02-09 13:56:44.168  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[57]}
+2020-02-09 13:56:44.170  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/57', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[57]}
+2020-02-09 13:56:44.171  INFO 8448 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 13:56:44.181  INFO 8448 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='#### 题目
+给定一个大小为$$N\times M$$的迷宫。迷宫由通道和墙壁组成，每一步可以向邻接的上下左右四个的通道移动，请求出从起点到终点所需的最小步数。限制条件$$N,M \le 100$$
+#### 输入
+（`'#'`,`'.'`,`'S'`,`'G'`分别表示墙壁、通道、起点和终点）
+>$$N=10, M=12$$
+>`#S######.#`
+>`......#..#`
+>`.#.##.##.#`
+>`.#........`
+>`##.##.####`
+>`....#....#`
+>`.#######.#`
+>`....#.....`
+>`.####.###.`
+>`....#...G#`
+
+#### 输出
+>22
+
+#### 分析
+宽度优先搜索按照距开始状态由近即远的顺序进行搜索，因此可以很容易地用来求最短路径、最少操作之类问题的答案。
+
+可以用`d[N][M]`数组把最短距离保存起来，用充分大得常数`INF`来初始化，这样一来，尚未到达的位置就是`INF`。
+
+因为要向四个方向移动，用`dx[4]`和`dy[4]`两个数组来表示四个方向向量，通过循环就可以实现四个方向移动得遍历。
+
+#### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <queue>
+using namespace std;
+#define MAX_SIZE 100
+#define INF 100000000
+
+struct Place{
+    int x;
+    int y;
+};
+
+char maze[MAX_SIZE][MAX_SIZE+1];
+int d[MAX_SIZE][MAX_SIZE];
+
+void bfs(Place s, Place g, int n, int m){
+	// 四个移动方向，对应右、下、左、上
+    int dx[4] = {1, 0, -1, 0}, dy[4] = {0, 1, 0, -1};
+    // 初始化距离数组，赋一个较大值INF
+    for(int i=0; i<n; i++)
+        for(int j=0; j<m; j++)
+            d[i][j] = INF;
+    queue<Place> que;
+    que.push(s);
+    d[s.x][s.y] = 0;
+    while(!que.empty()){
+        Place p = que.front();
+        que.pop();
+        // 找到出口
+        if(p.x == g.x && p.y == g.y)
+            break;
+        for(int i=0; i<4; i++){
+            int nx = p.x + dx[i], ny = p.y + dy[i];
+            if(0 <= nx && nx < n && 0 <= ny && ny < m && maze[nx][ny] != '#' && d[nx][ny] == INF){
+                Place tmp;
+                tmp.x = nx;
+                tmp.y = ny;
+                que.push(tmp);
+                // 当前位置可走通，则距离加一
+                d[nx][ny] = d[p.x][p.y] + 1;
+            }
+        }
+    }
+    //若输出INF则为死迷宫，反之，输出的是最短距离
+    printf("%d\n", d[g.x][g.y]);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    for(int i=0; i<n; i++)
+        scanf("%s", maze[i]);
+    Place s, g;
+    // 查询迷宫开始和结束位置
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(maze[i][j] == 'S'){
+                s.x = i;
+                s.y = j;
+            }
+            if(maze[i][j] == 'G'){
+                g.x = i;
+                g.y = j;
+            }
+        }
+    }
+    // bfs遍历
+    bfs(s, g, n, m);
+    return 0;
+}
+
+```
+#### 输出
+![在这里插入图片描述](https://img-blog.csdnimg.cn/20190730121123906.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}
+2020-02-09 13:56:48.372  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blog/60', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blog', args=[60]}
+2020-02-09 13:56:48.372  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/comments/60', ip='127.0.0.1', classMethod='com.lhy.blog.web.CommentController.comments', args=[60]}
+2020-02-09 13:56:48.374  INFO 8448 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 13:56:48.378  INFO 8448 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : Blog{id=60, title='1035 插入与归并 (25 分)', content='##### 题目
+根据维基百科的定义：
+
+**插入排序**是迭代算法，逐一获得输入数据，逐步产生有序的输出序列。每步迭代中，算法从输入序列中取出一元素，将之插入有序序列中正确的位置。如此迭代直到全部元素有序。
+
+**归并排序**进行如下迭代操作：首先将原始序列看成$N$个只包含 1 个元素的有序子序列，然后每次迭代归并两个相邻的有序子序列，直到最后只剩下 1 个有序的序列。
+
+现给定原始序列和由某排序算法产生的中间序列，请你判断该算法究竟是哪种排序算法？
+##### 输入格式：
+输入在第一行给出正整数$$N(\le 100)$$；随后一行给出原始序列的$$N$$个整数；最后一行给出由某排序算法产生的中间序列。这里假设排序的目标序列是升序。数字间以空格分隔。
+##### 输出格式：
+首先在第 1 行中输出`Insertion Sort`表示插入排序、或`Merge Sort`表示归并排序；然后在第 2 行中输出用该排序算法再迭代一轮的结果序列。题目保证每组测试的结果是唯一的。数字间以空格分隔，且行首尾不得有多余空格。
+##### 输入样例 1：
+>10
+>3 1 2 8 7 5 9 4 6 0
+>1 2 3 7 8 5 9 4 6 0
+
+##### 输出样例 1：
+>Insertion Sort
+>1 2 3 5 7 8 9 4 6 0
+
+##### 输入样例 2：
+>10
+3 1 2 8 7 5 9 4 0 6
+1 3 2 8 5 7 4 9 0 6
+
+##### 输出样例 2：
+>Merge Sort
+1 2 3 8 4 5 7 9 0 6
+
+##### 分析
+1. 模拟插入排序的过程很简单，这里不做讨论；
+2. 归并排序，集体思路可见我的另外一篇博客[https://blog.csdn.net/qq_40941722/article/details/94719872](https://blog.csdn.net/qq_40941722/article/details/94719872)，需要注意的是这里必须要采用非递归实现；
+
+##### 代码
+
+```cpp
+#include <iostream>
+#include <stdio.h>
+#include <cstring>
+using namespace std;
+
+bool isEqual(int arr1[], int arr2[], int n){
+    bool flag = true;
+    for(int i=0; i<n; i++){
+        if(arr1[i] != arr2[i]){
+            flag = false;
+            break;
+        }
+    }
+    return flag;
+}
+
+void MergeSortArr(int arr[], int left, int mid, int right){
+    int temp[right-left+1];
+    int i = left, j = mid + 1, k = 0;
+    while(i <= mid && j <= right){
+        if(arr[i] < arr[j])
+            temp[k++] = arr[i++];
+        else
+            temp[k++] = arr[j++];
+    }
+    while(i <= mid)
+        temp[k++] = arr[i++];
+    while(j <= right)
+        temp[k++] = arr[j++];
+    for(int i=0; i<k; i++)
+        arr[left+i] = temp[i];
+}
+
+void MergeSort(int arr[], int arr2[], int n){
+    int arr1[n];
+    for(int i=0; i<n; i++){
+        arr1[i] = arr[i];
+    }
+    bool isOuput = false;
+    int left, mid, right;
+    for(int i=2; ; i*=2){
+        for(int j=0; j<n; j+=i){
+            left = j;
+            mid = (2*j+i-1)/2 < n ? (2*j+i-1)/2 : n-1;
+            right = (j+i-1) < n ? j+i-1 : n-1;
+
+            MergeSortArr(arr1, left, mid, right);
+        }
+        if(isOuput){
+            printf("Merge Sort\n");
+            for(int k=0; k<n; k++){
+                if(k)
+                    printf(" ");
+                printf("%d", arr1[k]);
+            }
+            printf("\n");
+            break;
+        }
+        if(isEqual(arr1, arr2, n))
+            isOuput = true;
+        if(i > n)
+            break;
+    }
+}
+
+void InsertSort(int arr[], int arr2[], int n){
+    int arr1[n];
+    for(int i=0; i<n; i++){
+        arr1[i] = arr[i];
+    }
+    bool isOuput = false;
+    for(int i=1; i<n; i++){
+        for(int j=0; j<i; j++){
+            if(arr1[i] < arr1[j]){
+                int tmp = arr1[i];
+                for(int k=i; k>j; k--)
+                    arr1[k] = arr1[k-1];
+                arr1[j] = tmp;
+            }
+        }
+        if(isOuput){
+            printf("Insertion Sort\n");
+        for(int k=0; k<n; k++){
+                if(k)
+                    printf(" ");
+                printf("%d", arr1[k]);
+            }
+            printf("\n");
+            break;
+        }
+        if(isEqual(arr1, arr2, n))
+            isOuput = true;
+    }
+}
+
+int main(){
+    int n;
+    int arr1[100], arr2[100];
+    scanf("%d", &n);
+    for(int i=0; i<n; i++)
+        scanf("%d", arr1+i);
+    for(int i=0; i<n; i++)
+        scanf("%d", arr2+i);
+    MergeSort(arr1, arr2, n);
+    InsertSort(arr1, arr2, n);
+}
+
+```
+##### 提交
+![在这里插入图片描述](https://img-blog.csdnimg.cn/201907170853389.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwOTQxNzIy,size_16,color_FFFFFF,t_70)', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}
+2020-02-09 13:56:59.171  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.types', args=[]}
+2020-02-09 13:56:59.171  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tags/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TagShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 13:56:59.187  INFO 8448 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}, Tag{id=66, name='CSS3'}]
+2020-02-09 13:56:59.187  INFO 8448 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:56:59.993  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.types', args=[]}
+2020-02-09 13:56:59.995  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/types/0', ip='127.0.0.1', classMethod='com.lhy.blog.web.TypeShowController.blogs', args=[Page request [number: 0, size 6, sort: updateTime: DESC], 0]}
+2020-02-09 13:57:00.013  INFO 8448 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 1 containing com.lhy.blog.po.Blog instances
+2020-02-09 13:57:00.013  INFO 8448 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 13:57:00.835  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 13:57:00.854  INFO 8448 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:07:56.096  INFO 2124 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 2124 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-09 14:07:56.160 DEBUG 2124 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-09 14:07:56.161  INFO 2124 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-09 14:07:56.369  INFO 2124 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-09 14:07:56.371  INFO 2124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-09 14:07:56.374  INFO 2124 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-09 14:07:59.709  INFO 2124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-09 14:08:00.025  INFO 2124 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 265ms. Found 6 JPA repository interfaces.
+2020-02-09 14:08:01.501  INFO 2124 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 14:08:03.417  INFO 2124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-02-09 14:08:03.461  INFO 2124 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 14:08:03.462  INFO 2124 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-09 14:08:03.786  INFO 2124 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 14:08:03.787  INFO 2124 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7411 ms
+2020-02-09 14:08:04.737  INFO 2124 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-09 14:08:04.964  INFO 2124 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-09 14:08:05.674  INFO 2124 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-09 14:08:06.357  INFO 2124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-09 14:08:06.888  INFO 2124 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-09 14:08:06.981  INFO 2124 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-09 14:08:10.827  INFO 2124 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-09 14:08:10.838  INFO 2124 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 14:08:10.969  INFO 2124 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-09 14:08:16.279  WARN 2124 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-09 14:08:17.294  INFO 2124 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-09 14:08:19.212  INFO 2124 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-02-09 14:08:19.220  INFO 2124 --- [restartedMain] com.lhy.blog.BlogApplication             : Started BlogApplication in 25.242 seconds (JVM running for 30.299)
+2020-02-09 14:10:34.402  INFO 2124 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-09 14:10:34.402  INFO 2124 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-09 14:10:34.431  INFO 2124 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 28 ms
+2020-02-09 14:10:34.507  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:10:34.507  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:10:34.507  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:10:34.507  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:10:34.507  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:10:34.517  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:10:34.554  WARN 2124 --- [http-nio-8081-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 14:10:34.559  WARN 2124 --- [http-nio-8081-exec-4] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 14:10:34.638  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 14:10:34.701  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:10:34.705  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:10:34.747  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:10:34.768  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:10:34.771  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:11:58.432  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:11:58.435  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:11:58.437  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:11:58.450  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:11:58.475  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:11:58.501  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:11:58.499  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:11:58.504  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:11:58.508  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:11:58.512  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:11:58.515  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 14:11:58.535  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:12:23.051  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:12:23.056  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:12:23.061  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:12:23.071  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:12:23.076  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:12:23.090  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:12:23.095  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:12:23.108  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:12:23.115  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:12:23.120  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : []
+2020-02-09 14:12:23.135  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:12:23.162  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:15:07.764  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:15:07.764  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:15:07.786  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:15:07.792  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:15:07.805  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:15:07.806  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:15:07.809  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:15:07.813  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:15:07.813  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:15:07.820  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:15:07.825  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@36080018, com.lhy.blog.po.Music@7880ce3f]
+2020-02-09 14:15:07.856  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:15:54.173  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:15:54.186  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:15:54.194  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:15:54.195  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:15:54.205  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:15:54.206  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:15:54.218  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:15:54.220  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:15:54.225  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@12bce10b, com.lhy.blog.po.Music@4fa4388a]
+2020-02-09 14:15:54.226  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:15:54.242  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:15:54.269  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:17:08.434  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:17:08.434  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:17:08.434  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:17:08.460  INFO 2124 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:17:08.461  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:17:08.468  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:17:08.485  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:17:08.486  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:17:08.490  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@6968cba, com.lhy.blog.po.Music@1330ddb3]
+2020-02-09 14:17:08.491  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:17:08.492  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:17:08.514  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:17:35.299  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:17:35.301  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:17:35.316  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:17:35.323  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:17:35.374  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:17:35.375  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:17:35.391  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:17:35.396  INFO 2124 --- [http-nio-8081-exec-10] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:17:35.398  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:17:35.398  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:17:35.401  INFO 2124 --- [http-nio-8081-exec-7] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@310597c4, com.lhy.blog.po.Music@57a7cb85]
+2020-02-09 14:17:35.405  INFO 2124 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:18:10.430  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:18:10.430  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:18:10.442  INFO 2124 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 14:18:10.453  INFO 2124 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:18:10.474  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:18:10.474  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:18:10.474  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:18:10.480  INFO 2124 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@34248cd6, com.lhy.blog.po.Music@8981cb2]
+2020-02-09 14:18:10.485  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:18:10.487  INFO 2124 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:18:10.487  INFO 2124 --- [http-nio-8081-exec-9] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:18:10.503  INFO 2124 --- [http-nio-8081-exec-8] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:19:04.617  INFO 9380 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 9380 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-09 14:19:04.627 DEBUG 9380 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-09 14:19:04.628  INFO 9380 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-09 14:19:04.790  INFO 9380 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-09 14:19:04.794  INFO 9380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-09 14:19:04.795  INFO 9380 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-09 14:19:08.530  INFO 9380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-09 14:19:09.072  INFO 9380 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 459ms. Found 6 JPA repository interfaces.
+2020-02-09 14:19:10.523  INFO 9380 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 14:19:12.226  INFO 9380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-02-09 14:19:12.240  INFO 9380 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 14:19:12.241  INFO 9380 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-09 14:19:12.467  INFO 9380 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 14:19:12.467  INFO 9380 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7672 ms
+2020-02-09 14:19:13.025  INFO 9380 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-09 14:19:13.205  INFO 9380 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-09 14:19:13.458  INFO 9380 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-09 14:19:13.663  INFO 9380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-09 14:19:13.926  INFO 9380 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-09 14:19:13.964  INFO 9380 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-09 14:19:16.102  INFO 9380 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-09 14:19:16.113  INFO 9380 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 14:19:16.239  INFO 9380 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-09 14:19:19.608  WARN 9380 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-09 14:19:20.246  INFO 9380 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-09 14:19:21.696  INFO 9380 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-02-09 14:19:21.702  INFO 9380 --- [restartedMain] com.lhy.blog.BlogApplication             : Started BlogApplication in 18.506 seconds (JVM running for 21.544)
+2020-02-09 14:19:26.864  INFO 9380 --- [http-nio-8081-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-02-09 14:19:26.865  INFO 9380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-02-09 14:19:26.897  INFO 9380 --- [http-nio-8081-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 32 ms
+2020-02-09 14:19:26.962  INFO 9380 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/tagsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.tagIndex', args=[]}
+2020-02-09 14:19:26.965  INFO 9380 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogsIndex', args=[]}
+2020-02-09 14:19:26.966  INFO 9380 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/blogsIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.blogsIndex', args=[Page request [number: 0, size 6, sort: updateTime: DESC]]}
+2020-02-09 14:19:26.977  INFO 9380 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/newBlogs', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.newBlogs', args=[]}
+2020-02-09 14:19:26.977  INFO 9380 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/typesIndex', ip='127.0.0.1', classMethod='com.lhy.blog.web.IndexController.typesIndex', args=[]}
+2020-02-09 14:19:26.978  INFO 9380 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Request : Request{url='http://localhost:8081/music', ip='127.0.0.1', classMethod='com.lhy.blog.web.MusicController.music', args=[]}
+2020-02-09 14:19:27.013  WARN 9380 --- [http-nio-8081-exec-2] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 14:19:27.019  WARN 9380 --- [http-nio-8081-exec-1] org.hibernate.orm.deprecation            : HHH90000016: Found use of deprecated 'collection property' syntax in HQL/JPQL query [t.blogs.size]; use collection function syntax instead [size(t.blogs)].
+2020-02-09 14:19:27.113  INFO 9380 --- [http-nio-8081-exec-5] com.lhy.blog.aspect.LogAspect            : Result : [com.lhy.blog.po.Music@684fe186, com.lhy.blog.po.Music@73d8a5f9]
+2020-02-09 14:19:27.162  INFO 9380 --- [http-nio-8081-exec-3] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}, Blog{id=59, title='KMP算法（我的理解）', content='null', firstPicture='https://picsum.photos/id/1035/900/600', flag='原创', views=4, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:16:01.463, updateTime=2019-10-31 19:49:19.0}, Blog{id=81, title='1030 完美数列 (25 分)', content='null', firstPicture='https://picsum.photos/id/1055/900/600', flag='原创', views=11, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:38:16.986, updateTime=2019-07-07 22:17:48.0}, Blog{id=82, title='1028 人口普查 (20 分)', content='null', firstPicture='https://picsum.photos/id/1054/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 14:44:45.376, updateTime=2019-06-30 19:47:08.0}, Blog{id=64, title='css实现百叶窗照片墙', content='null', firstPicture='https://picsum.photos/id/1037/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:22:54.544, updateTime=2019-03-01 11:13:10.0}, Blog{id=67, title='表达式求值', content='null', firstPicture='https://picsum.photos/id/104/900/600', flag='原创', views=0, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:24:34.909, updateTime=2019-02-01 11:13:56.0}]
+2020-02-09 14:19:27.179  INFO 9380 --- [http-nio-8081-exec-4] com.lhy.blog.aspect.LogAspect            : Result : [Blog{id=57, title='迷宫的最短路径（宽度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1026/900/600', flag='原创', views=16, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-08 12:26:49.477, updateTime=2020-02-01 11:13:28.719}, Blog{id=58, title='Lake Counting——八连通的积水（深度优先搜索）', content='null', firstPicture='https://picsum.photos/id/1027/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:12:18.379, updateTime=2020-01-01 19:48:39.0}, Blog{id=60, title='1035 插入与归并 (25 分)', content='null', firstPicture='https://picsum.photos/id/1032/900/600', flag='原创', views=2, appreciation=true, shareStatement=true, commentabled=true, published=true, recommend=true, createTime=2020-01-07 18:18:56.497, updateTime=2019-12-31 19:52:21.0}]
+2020-02-09 14:19:27.183  INFO 9380 --- [http-nio-8081-exec-6] com.lhy.blog.aspect.LogAspect            : Result : Page 1 of 2 containing com.lhy.blog.po.Blog instances
+2020-02-09 14:19:27.186  INFO 9380 --- [http-nio-8081-exec-2] com.lhy.blog.aspect.LogAspect            : Result : [Tag{id=34, name='C++'}, Tag{id=39, name='HTML'}, Tag{id=40, name='CSS'}, Tag{id=41, name='JavaScript'}, Tag{id=35, name='Java'}, Tag{id=36, name='Python'}, Tag{id=37, name='Spring Boot'}, Tag{id=38, name='Redis'}, Tag{id=42, name='Vue.js'}, Tag{id=43, name='Mysql'}]
+2020-02-09 14:19:27.198  INFO 9380 --- [http-nio-8081-exec-1] com.lhy.blog.aspect.LogAspect            : Result : [Type{id=46, name='PAT（乙级）'}, Type{id=45, name='挑战程序设计竞赛'}, Type{id=47, name='数据结构'}, Type{id=62, name='前端'}, Type{id=48, name='填坑笔记'}, Type{id=88, name='算法'}]
+2020-02-09 20:52:31.056  INFO 8012 --- [restartedMain] com.lhy.blog.BlogApplication             : Starting BlogApplication on DESKTOP-KCJEFBA with PID 8012 (E:\CODE\Java\blog\target\classes started by 16177 in E:\CODE\Java\blog)
+2020-02-09 20:52:31.061 DEBUG 8012 --- [restartedMain] com.lhy.blog.BlogApplication             : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-09 20:52:31.061  INFO 8012 --- [restartedMain] com.lhy.blog.BlogApplication             : The following profiles are active: dev
+2020-02-09 20:52:31.129  INFO 8012 --- [restartedMain] o.s.b.devtools.restart.ChangeableUrls    : The Class-Path manifest attribute in C:\Users\16177\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/16177/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2020-02-09 20:52:31.129  INFO 8012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-02-09 20:52:31.129  INFO 8012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-02-09 20:52:32.449  INFO 8012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-09 20:52:32.628  INFO 8012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 166ms. Found 6 JPA repository interfaces.
+2020-02-09 20:52:33.088  INFO 8012 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 20:52:33.938  INFO 8012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-02-09 20:52:33.953  INFO 8012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-02-09 20:52:33.954  INFO 8012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.30]
+2020-02-09 20:52:34.097  INFO 8012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-02-09 20:52:34.097  INFO 8012 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2967 ms
+2020-02-09 20:52:34.655  INFO 8012 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-09 20:52:34.799  INFO 8012 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-09 20:52:35.097  INFO 8012 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-09 20:52:35.277  INFO 8012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-09 20:52:35.882  INFO 8012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-09 20:52:35.910  INFO 8012 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-09 20:52:40.110  INFO 8012 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-09 20:52:40.140  INFO 8012 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 20:52:40.237  INFO 8012 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-02-09 20:52:41.365  WARN 8012 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-09 20:52:41.630  INFO 8012 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-09 20:52:42.345  INFO 8012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-02-09 20:52:42.348  INFO 8012 --- [restartedMain] com.lhy.blog.BlogApplication             : Started BlogApplication in 12.107 seconds (JVM running for 14.749)
+2020-02-09 21:00:43.883  INFO 3960 --- [main] com.lhy.blog.BlogApplicationTests        : Starting BlogApplicationTests on DESKTOP-KCJEFBA with PID 3960 (started by 16177 in E:\CODE\Java\blog)
+2020-02-09 21:00:43.887 DEBUG 3960 --- [main] com.lhy.blog.BlogApplicationTests        : Running with Spring Boot v2.2.4.RELEASE, Spring v5.2.3.RELEASE
+2020-02-09 21:00:43.887  INFO 3960 --- [main] com.lhy.blog.BlogApplicationTests        : The following profiles are active: dev
+2020-02-09 21:00:45.238  INFO 3960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-09 21:00:45.434  INFO 3960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 178ms. Found 6 JPA repository interfaces.
+2020-02-09 21:00:46.121  INFO 3960 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-09 21:00:46.860  INFO 3960 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-09 21:00:47.006  INFO 3960 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-09 21:00:47.338  INFO 3960 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-09 21:00:47.801  INFO 3960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-02-09 21:00:48.426  INFO 3960 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-02-09 21:00:48.459  INFO 3960 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+2020-02-09 21:00:51.322  INFO 3960 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-09 21:00:51.353  INFO 3960 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 21:00:54.031  WARN 3960 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-09 21:00:54.674  INFO 3960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-09 21:00:55.451  INFO 3960 --- [main] com.lhy.blog.BlogApplicationTests        : Started BlogApplicationTests in 12.464 seconds (JVM running for 14.278)
+2020-02-09 21:00:55.671  INFO 3960 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-02-09 21:00:55.678  INFO 3960 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-02-09 21:00:55.684  INFO 3960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-02-09 21:00:55.707  INFO 3960 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
