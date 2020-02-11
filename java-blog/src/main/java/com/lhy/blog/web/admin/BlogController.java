@@ -53,7 +53,6 @@ public class BlogController {
         blog.setTags(null);
         blog.setComments(null);
         blog.setUser(null);
-        blog.setDescription(null);
         return blog;
     }
 
